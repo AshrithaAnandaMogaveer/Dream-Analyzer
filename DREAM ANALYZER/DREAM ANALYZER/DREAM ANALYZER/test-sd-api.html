@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stable Diffusion API Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        #result { margin-top: 20px; white-space: pre-wrap; background: #f5f5f5; padding: 15px; border-radius: 5px; }
+        button { padding: 10px 15px; background: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #45a049; }
+    </style>
+</head>
+<body>
+    <h1>Stable Diffusion API Test</h1>
+    <div>
+        <label for="prompt">Enter your prompt:</label><br>
+        <input type="text" id="prompt" style="width: 100%; padding: 10px; margin: 10px 0;" 
+               value="a beautiful landscape with mountains and a lake">
+    </div>
+    <button onclick="generateImage()">Generate Image</button>
+    <div id="result">Click the button to generate an image...</div>
+    <div id="imageContainer" style="margin-top: 20px;"></div>
+
+    <script>
+        async function generateImage() {
+            const prompt = document.getElementById('prompt').value;
+            const resultDiv = document.getElementById('result');
+            const imageContainer = document.getElementById('imageContainer');
+            
+            resultDiv.textContent = 'Generating image...';
+            imageContainer.innerHTML = '';
+            
+            try {
+                // First, test the API connection
+                resultDiv.textContent = 'Testing API connection...';
+                const testResponse = await fetch('http://127.0.0.1:7861/sdapi/v1/sd-models');
+                
+                if (!testResponse.ok) {
+                    throw new Error(`API connection failed: ${testResponse.status}`);
+                }
+                
+                // If connection is good, generate image
+                resultDiv.textContent = 'Connected! Generating image...';
+                
+                const response = await fetch('http://127.0.0.1:7861/sdapi/v1/txt2img', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        prompt: `${prompt}, high quality, detailed, 4k`,
+                        negative_prompt: 'blurry, low quality, distorted, bad anatomy, text, watermark',
+                        steps: 20,
+                        width: 512,
+                        height: 512,
+                        cfg_scale: 7,
+                        sampler_name: 'Euler a',
+                    }),
+                });
+                
+                if (!response.ok) {
+                    const error = await response.json();
+                    throw new Error(JSON.stringify(error, null, 2));
+                }
+                
+                const data = await response.json();
+                resultDiv.textContent = 'Image generated successfully!';
+                
+                // Display the image
+                const img = document.createElement('img');
+                img.src = 'data:image/png;base64,' + data.images[0];
+                img.style.maxWidth = '100%';
+                imageContainer.innerHTML = '';
+                imageContainer.appendChild(img);
+                
+            } catch (error) {
+                resultDiv.textContent = 'Error: ' + error.message;
+                console.error('Error:', error);
+            }
+        }
+    </script>
+</body>
+</html>

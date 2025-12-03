@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c7d2fe"/>
+      <stop offset="50%" stop-color="#e9d5ff"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </linearGradient>
+    <filter id="blur" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#g)"/>
+  <g filter="url(#blur)">
+    <circle cx="260" cy="300" r="140" fill="#f5d0fe" opacity="0.85"/>
+    <circle cx="520" cy="480" r="200" fill="#93c5fd" opacity="0.75"/>
+    <circle cx="780" cy="360" r="160" fill="#fde68a" opacity="0.6"/>
+    <ellipse cx="540" cy="720" rx="360" ry="140" fill="#ffffff" opacity="0.35"/>
+  </g>
+  <g>
+    <path d="M160 760 C 260 700, 380 700, 520 760 S 820 820, 900 760" fill="none" stroke="#ffffff" stroke-width="6" opacity="0.45"/>
+    <path d="M200 820 C 320 780, 420 780, 560 820 S 860 860, 900 820" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.35"/>
+  </g>
+  <g>
+    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" font-size="42" fill="#334155" opacity="0.9">
+      Dream visualization unavailable
+    </text>
+    <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" font-family="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" font-size="24" fill="#475569" opacity="0.8">
+      Showing a calming placeholder image
+    </text>
+  </g>
+</svg>

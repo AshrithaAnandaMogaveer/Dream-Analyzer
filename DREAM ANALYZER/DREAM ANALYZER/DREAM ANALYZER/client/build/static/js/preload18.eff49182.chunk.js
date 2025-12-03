@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkdream_analyzer_client=self.webpackChunkdream_analyzer_client||[]).push([[853],{1668:(e,a,l)=>{l.r(a),l.d(a,{default:()=>n});var r=l(6723);function n(){return(0,r.jsx)("div",{children:"Placeholder - Card Shell (Phase 0)"})}}}]);
+//# sourceMappingURL=preload18.eff49182.chunk.js.map

@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/preload20.069be1f4.chunk.js","mappings":"yKAAe,SAASA,IACtB,OAAOC,EAAAA,EAAAA,KAAA,OAAAC,SAAK,uCACd,C","sources":["components/DreamDiaryV2/Common/ModalShell.jsx"],"sourcesContent":["export default function ModalShell() {\r\n  return <div>Placeholder - Modal Shell (Phase 0)</div>;\r\n}\r\n"],"names":["ModalShell","_jsx","children"],"sourceRoot":""}

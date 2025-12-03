@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "*": ["*"]
+    },
+    "moduleResolution": "node",
+    "target": "es6",
+    "jsx": "react"
+  },
+  "exclude": ["node_modules", "**/node_modules/*"],
+  "include": ["src"]
+}

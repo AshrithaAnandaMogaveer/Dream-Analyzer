@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdream_analyzer_client=self.webpackChunkdream_analyzer_client||[]).push([[498],{2247:(e,a,c)=>{e.exports=c.p+"static/media/ocean.31d6cfe0d16ae931b73c.mp3"}}]);

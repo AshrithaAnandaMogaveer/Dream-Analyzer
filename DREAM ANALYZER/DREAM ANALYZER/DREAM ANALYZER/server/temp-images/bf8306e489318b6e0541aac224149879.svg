@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <svg width="1024" height="1024" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="hsl(136, 60%, 90%)" />
+        <stop offset="100%" stop-color="hsl(136, 40%, 80%)" />
+      </linearGradient>
+      <filter id="noise" x="0" y="0" width="100%" height="100%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" />
+        <feColorMatrix type="saturate" values="0.5"/>
+      </filter>
+      <filter id="blur">
+        <feGaussianBlur stdDeviation="0.5" />
+      </filter>
+    </defs>
+    
+    <!-- Background -->
+    <rect width="100%" height="100%" fill="url(#bg)" />
+    <rect width="100%" height="100%" filter="url(#noise)" opacity="0.1"/>
+    
+    <!-- Pattern -->
+    <g filter="url(#blur)">
+      <polygon points="14.9,-14 -17.6,51 47.4,51" fill="hsl(346, 70%, 60%)" opacity="0.45999999999999996" transform="rotate(191 14.9% 18.5%)" filter="blur(4.333333333333333px)" />
+      <polygon points="7.7,-9.5 -6.8,19.5 22.2,19.5" fill="hsl(316, 70%, 60%)" opacity="0.3" transform="rotate(131 7.7% 5%)" filter="blur(1.9333333333333333px)" />
+      <circle cx="17.6%" cy="8.6%" r="38" fill="hsl(46, 70%, 60%)" opacity="0.5800000000000001" transform="rotate(6 17.6% 8.6%)" filter="blur(3.8px)" />
+      <polygon points="13.1,-8.3 -2.9000000000000004,23.7 29.1,23.7" fill="hsl(46, 70%, 60%)" opacity="0.45999999999999996" transform="rotate(228 13.1% 7.7%)" filter="blur(2.1333333333333333px)" />
+      <polygon points="12.2,-8.6 -11.3,38.4 35.7,38.4" fill="hsl(316, 70%, 60%)" opacity="0.36" transform="rotate(137 12.2% 14.9%)" filter="blur(3.1333333333333333px)" />
+      <circle cx="17.6%" cy="5%" r="23" fill="hsl(346, 70%, 60%)" opacity="0.45999999999999996" transform="rotate(49 17.6% 5%)" filter="blur(2.3px)" />
+      <line x1="14.9%" y1="18.5%" x2="7.7%" y2="5%" stroke="hsl(316, 70%, 60%)" stroke-width="2" opacity="0.3" stroke-linecap="round" />
+      <line x1="7.7%" y1="5%" x2="17.6%" y2="8.6%" stroke="hsl(346, 70%, 60%)" stroke-width="2" opacity="0.3" stroke-linecap="round" />
+      <line x1="17.6%" y1="8.6%" x2="13.1%" y2="7.7%" stroke="hsl(136, 70%, 60%)" stroke-width="2" opacity="0.3" stroke-linecap="round" />
+      <line x1="13.1%" y1="7.7%" x2="12.2%" y2="14.9%" stroke="hsl(46, 70%, 60%)" stroke-width="2" opacity="0.3" stroke-linecap="round" />
+      <line x1="12.2%" y1="14.9%" x2="17.6%" y2="5%" stroke="hsl(226, 70%, 60%)" stroke-width="2" opacity="0.3" stroke-linecap="round" />
+    </g>
+    
+    <!-- Floating text -->
+    <g font-family="Arial, sans-serif">
+      <text x="18.8%" y="25.5%" 
+            font-size="23" 
+            fill="hsl(136, 70%, 60%)" 
+            opacity="0.6"
+            transform="rotate(-4 18.8% 25.5%)"
+            font-family="Arial, sans-serif"
+            text-anchor="middle"
+            font-weight="normal"
+            style="pointer-events: none; user-select: none;">
+              beautiful,
+            </text>
+      <text x="16.4%" y="17.1%" 
+            font-size="27" 
+            fill="hsl(46, 70%, 60%)" 
+            opacity="0.6"
+            transform="rotate(-7 16.4% 17.1%)"
+            font-family="Arial, sans-serif"
+            text-anchor="middle"
+            font-weight="bold"
+            style="pointer-events: none; user-select: none;">
+              detailed,
+            </text>
+      <text x="10%" y="19.2%" 
+            font-size="20" 
+            fill="hsl(226, 70%, 60%)" 
+            opacity="0.6"
+            transform="rotate(-15 10% 19.2%)"
+            font-family="Arial, sans-serif"
+            text-anchor="middle"
+            font-weight="normal"
+            style="pointer-events: none; user-select: none;">
+              artistic
+            </text>
+      <text x="21.200000000000003%" y="17.8%" 
+            font-size="15" 
+            fill="hsl(316, 70%, 60%)" 
+            opacity="0.6"
+            transform="rotate(-1 21.200000000000003% 17.8%)"
+            font-family="Arial, sans-serif"
+            text-anchor="middle"
+            font-weight="bold"
+            style="pointer-events: none; user-select: none;">
+              visualization
+            </text>
+      <text x="16.4%" y="21.3%" 
+            font-size="12" 
+            fill="hsl(346, 70%, 60%)" 
+            opacity="0.6"
+            transform="rotate(-7 16.4% 21.3%)"
+            font-family="Arial, sans-serif"
+            text-anchor="middle"
+            font-weight="normal"
+            style="pointer-events: none; user-select: none;">
+              crying&quot;
+            </text>
+    </g>
+    
+    <!-- Main content -->
+    <g transform="translate(0, 0)" font-family="Arial, sans-serif" text-anchor="middle">
+      <text x="50%" y="40%" font-size="5" fill="hsl(316, 70%, 30%)" font-weight="bold" text-anchor="middle">
+        <tspan x="50%" dy="0">Dream Visualization</tspan>
+      </text>
+      <text x="50%" y="50%" font-size="2.5" fill="hsl(316, 50%, 30%)" opacity="0.9" text-anchor="middle">
+        <tspan x="50%" dy="0">A beautiful, detailed, and artistic visualization of: &quot;i was crying&quot;</tspan>
+      </text>
+      <text x="50%" y="60%" font-size="1.5" fill="hsl(316, 30%, 40%)" opacity="0.7" text-anchor="middle">
+        <tspan x="50%" dy="0">ID: bf8306e4</tspan>
+      </text>
+      <text x="50%" y="95%" font-size="1.2" fill="hsl(316, 20%, 50%)" opacity="0.6" text-anchor="middle">
+        <tspan x="50%" dy="0">Generated: 9/11/2025, 12:45:19 pm</tspan>
+      </text>
+    </g>
+  </svg>

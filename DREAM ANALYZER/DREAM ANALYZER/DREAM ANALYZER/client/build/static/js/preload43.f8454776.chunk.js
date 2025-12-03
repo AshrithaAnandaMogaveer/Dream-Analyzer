@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdream_analyzer_client=self.webpackChunkdream_analyzer_client||[]).push([[509],{2063:(e,a,c)=>{e.exports=c.p+"static/media/breathing.31d6cfe0d16ae931b73c.mp3"}}]);

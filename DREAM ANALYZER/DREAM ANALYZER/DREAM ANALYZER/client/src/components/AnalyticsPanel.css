@@ -1,0 +1,230 @@
+.analytics-panel {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.panel-header h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
+
+.dream-count {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.loading,
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #999;
+}
+
+.empty-state p {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.empty-state small {
+  font-size: 0.85rem;
+  color: #bbb;
+}
+
+.chart-section {
+  margin-bottom: 24px;
+}
+
+.chart-section h4 {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.chart-container {
+  position: relative;
+  width: 100%;
+}
+
+.pie-chart {
+  height: 200px;
+}
+
+.line-chart {
+  height: 180px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #ffeef8 0%, #e0f4ff 100%);
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.stat-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #667eea;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.themes-section h4 {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.themes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.theme-tag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9fafb;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border-left: 3px solid #667eea;
+}
+
+.theme-name {
+  font-size: 0.9rem;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.theme-count {
+  background: #667eea;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Scrollbar styling */
+.analytics-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.analytics-panel::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.analytics-panel::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 10px;
+}
+
+.analytics-panel::-webkit-scrollbar-thumb:hover {
+  background: #764ba2;
+}
+
+/* Interpretation and Emotion Meters */
+.interpretation-section {
+  margin: 20px 0 12px;
+  padding: 12px;
+  background: #faf7ff;
+  border: 1px solid #f0eaff;
+  border-radius: 12px;
+}
+
+.interpretation-section h4 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+.interpretation-text {
+  margin: 0 0 12px;
+  color: #374151;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+.emotion-meters {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.emotion-meter {}
+
+.emotion-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  font-size: 0.85rem;
+}
+
+.emotion-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.emotion-name { text-transform: capitalize; color: #374151; }
+.emotion-value { color: #6b7280; font-weight: 600; }
+
+.emotion-bar {
+  width: 100%;
+  height: 8px;
+  background: #ebe9f7;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.emotion-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #a78bfa, #60a5fa);
+}
+
+/* Emotion specific dot colors */
+.emotion-joy { background: #FFD700; }
+.emotion-fear { background: #DC143C; }
+.emotion-anxiety { background: #FF8C00; }
+.emotion-calmness { background: #98FB98; }
+.emotion-sadness { background: #4169E1; }
+.emotion-excitement { background: #FF69B4; }

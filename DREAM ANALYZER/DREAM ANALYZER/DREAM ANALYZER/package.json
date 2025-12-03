@@ -1,0 +1,80 @@
+{
+  "name": "dream-analyzer",
+  "version": "1.0.0",
+  "description": "AI-powered dream analysis and journaling application",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "predev": "node scripts/setup-env.js",
+    "dev": "concurrently -k -n server,client -c green,cyan \"npm:server\" \"wait-on tcp:5000 && npm:client\"",
+    "server": "nodemon server/index.js",
+    "client": "npm start --prefix client",
+    "build": "cd client && npm run build",
+    "install-all": "npm install && cd client && npm install",
+    "setup": "npm run install-all && npm run setup-env",
+    "setup-env": "node scripts/setup-env.js",
+    "test": "cd client && npm test",
+    "lint": "cd client && npm run lint",
+    "clean": "rm -rf node_modules client/node_modules client/build",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "keywords": [
+    "dream",
+    "analysis",
+    "ai",
+    "journal",
+    "psychology",
+    "meditation"
+  ],
+  "author": "Dream Analyzer Team",
+  "license": "MIT",
+  "dependencies": {
+    "@google/genai": "^1.27.0",
+    "assert": "^2.1.0",
+    "axios": "^1.12.2",
+    "bcryptjs": "^2.4.3",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^6.0.3",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.6.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.11.2",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.0.0",
+    "https-browserify": "^1.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.5.0",
+    "multer": "^1.4.5-lts.1",
+    "node-fetch": "^3.3.2",
+    "openai": "^4.0.0",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "querystring-es3": "^0.2.1",
+    "recharts": "^3.3.0",
+    "socket.io": "^4.7.2",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.4",
+    "util": "^0.12.5",
+    "winston": "^3.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "nodemon": "^3.0.1",
+    "react-app-rewired": "^2.2.1",
+    "wait-on": "^7.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/dream-analyzer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/dream-analyzer/issues"
+  },
+  "homepage": "https://github.com/your-username/dream-analyzer#readme"
+}

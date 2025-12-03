@@ -1,0 +1,11 @@
+{
+  "models": [
+    {
+      "title": "Local Tabby",
+      "provider": "tabby",
+      "apiBase": "http://localhost:8080",
+      "model": "TabbyML/StarCoder-1B",
+      "apiKey": "auth_fbdde275868043078b5034c685cb6c79"
+    }
+  ]
+}

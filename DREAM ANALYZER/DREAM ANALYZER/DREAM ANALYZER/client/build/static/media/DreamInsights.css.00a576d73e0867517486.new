@@ -1,0 +1,181 @@
+/* DreamInsights.css */
+
+.dream-insights {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+.insights-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.insights-header h2 {
+  margin: 0;
+  color: #2d3748;
+  font-size: 1.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.header-icon {
+  color: #6d28d9;
+  font-size: 1.5rem;
+}
+
+.dream-date {
+  color: #718096;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.insights-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.insight-section {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.insight-section:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+  padding: 1.25rem 1.5rem;
+  background: #f8f9fa;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.section-header:hover {
+  background: #f1f3f5;
+}
+
+.section-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.toggle-icon {
+  color: #6b7280;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease;
+}
+
+.section-content {
+  overflow: hidden;
+}
+
+.section-text {
+  padding: 1.5rem;
+  line-height: 1.7;
+  color: #4a5568;
+}
+
+.section-text p {
+  margin: 0 0 1rem 0;
+}
+
+.section-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Dream image styling */
+.dream-image-container {
+  margin-top: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dream-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Symbol list styling */
+.symbols-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.symbol-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  gap: 1rem;
+}
+
+.symbol-item:last-child {
+  border-bottom: none;
+}
+
+.symbol-name {
+  font-weight: 600;
+  color: #4f46e5;
+  min-width: 120px;
+}
+
+.symbol-meaning {
+  flex: 1;
+  color: #4a5568;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dream-insights {
+    padding: 1rem;
+    border-radius: 0;
+  }
+  
+  .section-header h3 {
+    font-size: 1rem;
+  }
+  
+  .symbol-item {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .symbol-name {
+    min-width: auto;
+  }
+}
+
+/* Animation for section content */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section-content {
+  animation: fadeIn 0.3s ease-out forwards;
+}

@@ -1,0 +1,796 @@
+/* Mental Health & Wellness Modal - Calming Theme */
+
+/* Modal Overlay */
+.mental-health-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(147, 197, 253, 0.15) 0%, 
+    rgba(196, 181, 253, 0.15) 50%, 
+    rgba(251, 207, 232, 0.15) 100%
+  );
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+/* Modal Card */
+.mental-health-modal-card {
+  background: linear-gradient(145deg, 
+    rgba(255, 255, 255, 0.95) 0%, 
+    rgba(248, 250, 252, 0.95) 50%, 
+    rgba(241, 245, 249, 0.95) 100%
+  );
+  border-radius: 24px;
+  box-shadow: 
+    0 20px 60px rgba(147, 197, 253, 0.25),
+    0 8px 32px rgba(196, 181, 253, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 40px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #334155;
+}
+
+/* Custom scrollbar */
+.mental-health-modal-card::-webkit-scrollbar {
+  width: 8px;
+}
+
+.mental-health-modal-card::-webkit-scrollbar-track {
+  background: rgba(226, 232, 240, 0.3);
+  border-radius: 4px;
+}
+
+.mental-health-modal-card::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #c7d2fe, #ddd6fe);
+  border-radius: 4px;
+}
+
+/* Header */
+.mental-health-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.mental-health-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #4c1d95;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mental-health-tagline {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+/* Generate Section */
+.mental-health-generate-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.mental-health-generate-btn {
+  background: linear-gradient(135deg, #8b5cf6, #a855f7);
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);
+}
+
+.mental-health-generate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(139, 92, 246, 0.4);
+}
+
+.mental-health-generate-btn:active {
+  transform: translateY(0);
+}
+
+/* Sections */
+.mental-health-section {
+  margin-bottom: 40px;
+}
+
+.mental-health-section-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #4c1d95;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mental-health-section-title::before {
+  content: '';
+  width: 4px;
+  height: 24px;
+  background: linear-gradient(135deg, #8b5cf6, #a855f7);
+  border-radius: 2px;
+}
+
+/* Subsections */
+.mental-health-subsection {
+  background: linear-gradient(145deg, 
+    rgba(248, 250, 252, 0.8), 
+    rgba(241, 245, 249, 0.8)
+  );
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(226, 232, 240, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+.mental-health-subsection-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #6366f1;
+  margin-bottom: 12px;
+}
+
+.mental-health-placeholder-text {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.mental-health-content-text {
+  font-size: 14px;
+  color: #334155;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Cards Grid */
+.mental-health-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.mental-health-card {
+  background: linear-gradient(145deg, 
+    rgba(255, 255, 255, 0.9), 
+    rgba(248, 250, 252, 0.9)
+  );
+  border-radius: 20px;
+  padding: 24px;
+  text-align: center;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(147, 197, 253, 0.15);
+}
+
+.mental-health-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(147, 197, 253, 0.25);
+}
+
+.mental-health-card-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.mental-health-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #4c1d95;
+  margin-bottom: 8px;
+}
+
+.mental-health-card-description {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.mental-health-card-controls {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.mental-health-control-btn {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mental-health-control-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.mental-health-control-btn.secondary {
+  background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+  color: #64748b;
+}
+
+.mental-health-control-btn.secondary:hover {
+  background: linear-gradient(135deg, #cbd5e1, #94a3b8);
+}
+
+/* Videos Grid */
+.mental-health-videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.mental-health-video-card {
+  background: linear-gradient(145deg, 
+    rgba(255, 255, 255, 0.9), 
+    rgba(248, 250, 252, 0.9)
+  );
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(147, 197, 253, 0.15);
+}
+
+.mental-health-video-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(147, 197, 253, 0.25);
+}
+
+.mental-health-video-thumbnail {
+  height: 100px;
+  background: linear-gradient(135deg, #ddd6fe, #e9d5ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.mental-health-video-placeholder {
+  font-size: 32px;
+  opacity: 0.7;
+}
+
+.mental-health-video-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4c1d95;
+  padding: 12px 16px 4px;
+  margin: 0;
+}
+
+.mental-health-video-duration {
+  font-size: 12px;
+  color: #64748b;
+  padding: 0 16px 12px;
+  margin: 0;
+}
+
+/* List Items */
+.mental-health-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mental-health-list-item {
+  background: linear-gradient(145deg, 
+    rgba(255, 255, 255, 0.9), 
+    rgba(248, 250, 252, 0.9)
+  );
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(147, 197, 253, 0.15);
+}
+
+.mental-health-list-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(147, 197, 253, 0.25);
+}
+
+.mental-health-list-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.mental-health-list-content {
+  flex: 1;
+}
+
+.mental-health-list-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #4c1d95;
+  margin-bottom: 6px;
+}
+
+.mental-health-list-description {
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Footer */
+.mental-health-footer {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(226, 232, 240, 0.6);
+  flex-wrap: wrap;
+}
+
+.mental-health-footer-btn.submit {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3);
+}
+
+.mental-health-footer-btn.submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
+}
+
+.mental-health-video-thumbnail {
+  position: relative;
+}
+
+.mental-health-video-play-overlay:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.mental-health-footer-btn {
+  padding: 14px 32px;
+  border-radius: 16px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  min-width: 120px;
+}
+
+.mental-health-footer-btn.primary {
+  background: linear-gradient(135deg, #8b5cf6, #a855f7);
+  color: white;
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.3);
+}
+
+.mental-health-footer-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
+}
+
+.mental-health-footer-btn.secondary {
+  background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+  color: #64748b;
+}
+
+.mental-health-footer-btn.secondary:hover {
+  background: linear-gradient(135deg, #cbd5e1, #94a3b8);
+  transform: translateY(-1px);
+}
+
+/* Interactive Section Headers */
+.mental-health-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 8px 0;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.mental-health-section-header:hover {
+  background: linear-gradient(145deg, 
+    rgba(248, 250, 252, 0.5), 
+    rgba(241, 245, 249, 0.5)
+  );
+  padding: 8px 12px;
+  margin: 0 -12px;
+}
+
+.mental-health-section-header .mental-health-section-title {
+  margin-bottom: 0;
+  color: #4c1d95;
+}
+
+.chevron-icon {
+  color: #8b5cf6;
+  font-size: 14px;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, 
+    rgba(139, 92, 246, 0.1), 
+    rgba(168, 85, 247, 0.1)
+  );
+}
+
+/* Section Content Animation */
+.mental-health-section-content {
+  overflow: hidden;
+  will-change: height, opacity;
+}
+
+/* Loading State */
+.mental-health-generate-btn.loading {
+  position: relative;
+  color: transparent;
+  pointer-events: none;
+}
+
+.mental-health-generate-btn.loading::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Fade-in Animation for Guidance Content */
+.fade-in-text {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered Fade-in */
+.fade-in-text:nth-child(1) { animation-delay: 0.1s; }
+.fade-in-text:nth-child(2) { animation-delay: 0.2s; }
+.fade-in-text:nth-child(3) { animation-delay: 0.3s; }
+.fade-in-text:nth-child(4) { animation-delay: 0.4s; }
+.fade-in-text:nth-child(5) { animation-delay: 0.5s; }
+
+/* Audio Playing State */
+.mental-health-card.playing {
+  background: linear-gradient(145deg, 
+    rgba(139, 92, 246, 0.15), 
+    rgba(168, 85, 247, 0.15)
+  );
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(139, 92, 246, 0.3),
+    0 0 20px rgba(139, 92, 246, 0.1);
+  position: relative;
+}
+
+.mental-health-card.playing::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #8b5cf6, #a855f7, #8b5cf6);
+  border-radius: 20px;
+  opacity: 0.3;
+  animation: glow 2s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes glow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+.mental-health-card.playing .mental-health-card-icon {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.mental-health-control-btn.active {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+}
+
+.mental-health-control-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Save Button States */
+.mental-health-footer-btn.saving {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+  pointer-events: none;
+}
+
+.mental-health-footer-btn.saved {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  pointer-events: none;
+}
+
+.btn-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.btn-success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.success-check {
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  animation: checkmark 0.5s ease-out;
+}
+
+@keyframes checkmark {
+  0% { 
+    transform: scale(0) rotate(-45deg); 
+    opacity: 0;
+  }
+  50% { 
+    transform: scale(1.2) rotate(-45deg); 
+  }
+  100% { 
+    transform: scale(1) rotate(0deg); 
+    opacity: 1;
+  }
+}
+
+/* Enhanced Hover Effects */
+.mental-health-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.mental-health-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(139, 92, 246, 0.1), 
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.mental-health-card:hover::after {
+  left: 100%;
+}
+
+/* Ripple Effect for Buttons */
+.mental-health-control-btn,
+.mental-health-footer-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.mental-health-control-btn::before,
+.mental-health-footer-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.mental-health-control-btn:active::before,
+.mental-health-footer-btn:active::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Glassmorphism Enhancement */
+.mental-health-modal-card {
+  background: linear-gradient(145deg, 
+    rgba(255, 255, 255, 0.85), 
+    rgba(248, 250, 252, 0.85)
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 20px 60px rgba(147, 197, 253, 0.2),
+    0 8px 32px rgba(196, 181, 253, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* Floating Animation for Headers */
+.mental-health-title {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+/* Enhanced Section Cards */
+.mental-health-subsection {
+  background: linear-gradient(145deg, 
+    rgba(255, 255, 255, 0.7), 
+    rgba(248, 250, 252, 0.7)
+  );
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    0 8px 32px rgba(147, 197, 253, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* Enhanced Card Glass Effect */
+.mental-health-card,
+.mental-health-video-card,
+.mental-health-list-item {
+  background: linear-gradient(145deg, 
+    rgba(255, 255, 255, 0.8), 
+    rgba(248, 250, 252, 0.8)
+  );
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 
+    0 4px 16px rgba(147, 197, 253, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* Subtle Background Pattern */
+.mental-health-modal-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(196, 181, 253, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Smooth Transitions */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced Focus States */
+.mental-health-control-btn:focus,
+.mental-health-footer-btn:focus,
+.mental-health-generate-btn:focus {
+  outline: 2px solid rgba(139, 92, 246, 0.5);
+  outline-offset: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mental-health-modal-card {
+    padding: 24px;
+    margin: 20px;
+  }
+
+  .mental-health-title {
+    font-size: 24px;
+  }
+
+  .mental-health-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mental-health-videos-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .mental-health-footer {
+    flex-direction: column;
+  }
+
+  .mental-health-footer-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .mental-health-modal-overlay {
+    padding: 12px;
+  }
+
+  .mental-health-modal-card {
+    padding: 20px;
+  }
+
+  .mental-health-videos-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdream_analyzer_client=self.webpackChunkdream_analyzer_client||[]).push([[926],{7121:(e,a,s)=>{e.exports=s.p+"static/media/history.31d6cfe0d16ae931b73c.svg"}}]);
