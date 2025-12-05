@@ -186,32 +186,27 @@ exports.analyzeDream = async (req, res) => {
     const baseUrl = process.env.LM_STUDIO_BASE_URL || 'http://localhost:1234/v1/chat/completions';
     const model = process.env.LM_STUDIO_MODEL || 'local-model';
     // Mistral only supports user/assistant roles, so combine system prompt into user message
-    const userPrompt = `You are a professional dream psychologist. Analyze this dream and return ONLY valid JSON with detailed content.
+    const userPrompt = `Analyze this dream: "${text.slice(0,800)}"
 
-Dream: "${text.slice(0,1200)}"
+Write your analysis in this format:
 
-Return this exact JSON structure with thorough, detailed analysis:
-
-{
-  "sections": {
-    "yourDream": "Write 3-4 complete sentences summarizing the dream",
-    "introduction": "Write 3-4 complete sentences introducing the analysis",
-    "overview": "Write 4-5 complete sentences about main themes and emotions",
-    "keySymbolsAndElements": [
-      {"symbol": "symbol1", "meaning": "Write 2-3 complete sentences explaining meaning"},
-      {"symbol": "symbol2", "meaning": "Write 2-3 complete sentences explaining meaning"},
-      {"symbol": "symbol3", "meaning": "Write 2-3 complete sentences explaining meaning"}
-    ],
-    "psychologicalInterpretation": "Write 5-6 complete sentences with deep psychological analysis",
-    "culturalContext": "Write 3-4 complete sentences about cultural meanings",
-    "connectionsToWakingLife": "Write 4-5 complete sentences connecting to real life",
-    "summaryAndAdvice": "Write 4-5 complete sentences with insights and advice"
-  },
-  "emotions": {"joy": 0.2, "fear": 0.1, "anxiety": 0.1, "calmness": 0.3, "sadness": 0.1, "excitement": 0.2},
-  "remedies": ["Detailed suggestion 1", "Detailed suggestion 2", "Detailed suggestion 3", "Detailed suggestion 4"]
-}
-
-Return ONLY the JSON, no other text:`;
+SUMMARY: [Summarize the dream in 2-3 sentences]
+INTRODUCTION: [Introduce your analysis in 2-3 sentences]
+OVERVIEW: [Describe main themes in 3-4 sentences]
+SYMBOL1: [First key symbol name]
+MEANING1: [Explain this symbol in 2 sentences]
+SYMBOL2: [Second key symbol name]
+MEANING2: [Explain this symbol in 2 sentences]
+SYMBOL3: [Third key symbol name]
+MEANING3: [Explain this symbol in 2 sentences]
+PSYCHOLOGICAL: [Psychological analysis in 4-5 sentences]
+CULTURAL: [Cultural meanings in 2-3 sentences]
+WAKING_LIFE: [Connect to real life in 3-4 sentences]
+ADVICE: [Insights and advice in 3-4 sentences]
+REMEDY1: [One practical suggestion]
+REMEDY2: [One practical suggestion]
+REMEDY3: [One practical suggestion]
+REMEDY4: [One practical suggestion]`;
 
     const sanitizeJson = (raw) => {
       if (typeof raw !== 'string') return '{}';
@@ -222,19 +217,62 @@ Return ONLY the JSON, no other text:`;
         trimmed = trimmed.replace(/^```json\s*/i, '').replace(/```\s*$/i, '').trim();
       }
       
+      // Remove any text before the first brace
+      const firstBrace = trimmed.indexOf('{');
+      if (firstBrace > 0) {
+        trimmed = trimmed.substring(firstBrace);
+      }
+      
       // Remove any text after the closing brace
       const lastBrace = trimmed.lastIndexOf('}');
       if (lastBrace !== -1 && lastBrace < trimmed.length - 1) {
         trimmed = trimmed.substring(0, lastBrace + 1);
       }
       
-      // Fix common JSON errors from Llama-2
-      // Fix missing commas between fields ("}field" -> "},"field")
+      // CRITICAL: Replace single quotes with double quotes for JSON keys and values
+      // But be careful not to replace apostrophes inside words
+      trimmed = trimmed.replace(/'([a-zA-Z_][a-zA-Z0-9_]*)'\s*:/g, '"$1":'); // 'key': -> "key":
+      trimmed = trimmed.replace(/:\s*'([^']*)'/g, ':"$1"'); // : 'value' -> : "value"
+      
+      // Fix unquoted string values
+      trimmed = trimmed.replace(/":\s*([^"{\[\d\-][^,}\]]*?)([,}\]])/g, (match, value, ending) => {
+        const val = value.trim();
+        if (/^(\d+\.?\d*|true|false|null)$/i.test(val)) {
+          return match;
+        }
+        return `": "${val}"${ending}`;
+      });
+      
+      // Fix trailing commas
+      trimmed = trimmed.replace(/,(\s*[\]}])/g, '$1');
+      
+      // Fix missing commas between fields
       trimmed = trimmed.replace(/"\s*"([a-zA-Z])/g, '","$1');
-      // Fix missing commas in arrays (}{"symbol" -> },{"symbol")
+      trimmed = trimmed.replace(/\}\s*"([a-zA-Z])/g, '},"$1');
+      
+      // Fix missing commas in arrays
       trimmed = trimmed.replace(/\}\s*\{/g, '},{');
-      // Fix missing commas after arrays (]"field" -> ],"field")
+      
+      // Fix missing commas after arrays
       trimmed = trimmed.replace(/\]\s*"([a-zA-Z])/g, '],"$1');
+      
+      // Remove line breaks and extra whitespace inside string values
+      trimmed = trimmed.replace(/":\s*"([^"]*?)"/g, (match, content) => {
+        const cleaned = content
+          .replace(/\n/g, ' ')
+          .replace(/\r/g, ' ')
+          .replace(/\s+/g, ' ')
+          .replace(/\bof\s+of\b/gi, 'of')
+          .replace(/\s+([.,!?])/g, '$1')
+          .trim();
+        return `": "${cleaned}"`;
+      });
+      
+      // Remove excessive whitespace
+      trimmed = trimmed.replace(/\s{2,}/g, ' ');
+      
+      // Remove any trailing comments or text (like "// NO trailing commas...")
+      trimmed = trimmed.replace(/\/\/.*$/gm, '');
       
       return trimmed;
     };
@@ -252,12 +290,13 @@ Return ONLY the JSON, no other text:`;
           messages: [
             { role: 'user', content: userPrompt }
           ],
-          temperature: 0.7,
-          max_tokens: 800
+          temperature: 0.5,
+          max_tokens: 1200,
+          stream: false
         },
         { 
-          timeout: Number(process.env.LM_STUDIO_TIMEOUT_MS || 15000),
-          validateStatus: (status) => status < 500 // Don't throw on 4xx errors
+          timeout: Number(process.env.LM_STUDIO_TIMEOUT_MS || 120000),
+          validateStatus: (status) => status < 500
         }
       );
       
@@ -265,36 +304,106 @@ Return ONLY the JSON, no other text:`;
       if (resp.status !== 200) {
         console.error('❌ LM Studio returned error status:', resp.status);
         console.error('Response data:', JSON.stringify(resp.data, null, 2));
+        
+        // If model crashed, throw to use fallback
+        if (resp.data?.error && resp.data.error.includes('crashed')) {
+          console.error('⚠️ Model crashed - will use fallback analysis');
+          throw new Error('Model crashed');
+        }
+        
         throw new Error(`LM Studio error: ${resp.status} - ${JSON.stringify(resp.data)}`);
       }
       
       console.log('✅ LM Studio responded successfully!');
-      const raw = resp?.data?.choices?.[0]?.message?.content?.trim() || '{}';
+      const raw = resp?.data?.choices?.[0]?.message?.content?.trim() || '';
       console.log('📥 Raw response (first 500 chars):', raw.substring(0, 500));
+      
+      // Parse the plain text format into structured JSON
+      const parseTextResponse = (text) => {
+        const extract = (label) => {
+          // More flexible regex that handles various formats
+          const regex = new RegExp(`${label}:\\s*\\[?([^\\[\\]]+?)(?=\\n\\s*[A-Z_]+:|$)`, 'is');
+          const match = text.match(regex);
+          if (match) {
+            let content = match[1].trim();
+            // Clean up whitespace but preserve sentence structure
+            content = content.replace(/\s+/g, ' ').trim();
+            // Remove any trailing punctuation artifacts
+            content = content.replace(/\s+([.,!?])/g, '$1');
+            return content;
+          }
+          return '';
+        };
+        
+        const symbols = [];
+        for (let i = 1; i <= 5; i++) {
+          const symbol = extract(`SYMBOL${i}`);
+          const meaning = extract(`MEANING${i}`);
+          if (symbol && meaning && symbol.length > 2 && meaning.length > 10) {
+            symbols.push({ symbol, meaning });
+          }
+        }
+        
+        // If no symbols found, extract from keywords
+        if (symbols.length === 0 && keywords.length > 0) {
+          keywords.slice(0, 3).forEach(kw => {
+            symbols.push({ 
+              symbol: kw.charAt(0).toUpperCase() + kw.slice(1), 
+              meaning: `This symbol represents an important element in your dream, reflecting aspects of ${themes[0] || 'your subconscious mind'} and personal experiences.` 
+            });
+          });
+        }
+        
+        // Extract all sections with better fallbacks
+        const summary = extract('SUMMARY');
+        const intro = extract('INTRODUCTION');
+        const overview = extract('OVERVIEW');
+        const psych = extract('PSYCHOLOGICAL');
+        const cultural = extract('CULTURAL');
+        const waking = extract('WAKING_LIFE');
+        const advice = extract('ADVICE');
+        
+        return {
+          sections: {
+            yourDream: summary && summary.length > 20 ? summary : text.slice(0, 300),
+            introduction: intro && intro.length > 30 ? intro : `This dream reveals fascinating insights about ${themes.join(', ')}. The symbols and emotions present offer valuable clues about your subconscious mind.`,
+            overview: overview && overview.length > 30 ? overview : `The dream centers on themes of ${themes.join(' and ')}, featuring ${keywords.slice(0,2).join(' and ')} as key elements.`,
+            keySymbolsAndElements: symbols,
+            psychologicalInterpretation: psych && psych.length > 40 ? psych : `From a psychological perspective, this dream reflects your current emotional state and inner processing. The themes of ${themes[0] || 'personal growth'} suggest active subconscious work.`,
+            culturalContext: cultural && cultural.length > 30 ? cultural : `Across various cultures, dreams about ${keywords[0] || 'these themes'} carry symbolic meanings related to transformation and personal development.`,
+            connectionsToWakingLife: waking && waking.length > 30 ? waking : `Consider how the themes of ${themes.join(' and ')} might relate to your current life circumstances, relationships, or challenges you're facing.`,
+            summaryAndAdvice: advice && advice.length > 30 ? advice : `Reflect on the themes and symbols in this dream. Consider keeping a dream journal to track patterns and deepen your self-understanding.`
+          },
+          emotions: emotions,
+          remedies: [
+            extract('REMEDY1'),
+            extract('REMEDY2'),
+            extract('REMEDY3'),
+            extract('REMEDY4')
+          ].filter(r => r && r.length > 10)
+        };
+      };
+      
       let parsed;
       try {
-        parsed = JSON.parse(sanitizeJson(raw));
+        parsed = parseTextResponse(raw);
       } catch(jsonErr) {
-        // Try again with simpler prompt
-        console.log('⚠️ First response was not valid JSON:', jsonErr.message);
-        console.log('📄 Full response:', raw);
-        const resp2 = await axios.post(
-          baseUrl,
-          {
-            model,
-            messages: [
-              { role: 'user', content: userPrompt }
-            ],
-            temperature: 0.5,
-            max_tokens: 1500
+        console.log('⚠️ Failed to parse response:', jsonErr.message);
+        // Use fallback with empty sections
+        parsed = {
+          sections: {
+            yourDream: text,
+            introduction: '',
+            overview: '',
+            keySymbolsAndElements: [],
+            psychologicalInterpretation: '',
+            culturalContext: '',
+            connectionsToWakingLife: '',
+            summaryAndAdvice: ''
           },
-          { 
-            timeout: Number(process.env.LM_STUDIO_TIMEOUT_MS || 15000),
-            validateStatus: (status) => status < 500
-          }
-        );
-        const raw2 = resp2?.data?.choices?.[0]?.message?.content?.trim() || '{}';
-        parsed = JSON.parse(sanitizeJson(raw2));
+          emotions: emotions,
+          remedies: []
+        };
       }
       const pSections = parsed.sections || {};
       const minLen = (s, n) => typeof s === 'string' && s.trim().length >= n;
@@ -329,53 +438,17 @@ Return ONLY the JSON, no other text:`;
       sectionEmotions = parsed.emotions && typeof parsed.emotions === 'object' ? parsed.emotions : emotions;
       remedies = Array.isArray(parsed.remedies) ? parsed.remedies.slice(0,6) : [];
 
-      const complete = (
-        minLen(sections.yourDream, 20) &&
-        minLen(sections.introduction, 60) &&
-        minLen(sections.overview, 60) &&
-        Array.isArray(sections.keySymbolsAndElements) && sections.keySymbolsAndElements.length >= 3 &&
-        minLen(sections.psychologicalInterpretation, 60) &&
-        minLen(sections.connectionsToWakingLife, 50) &&
-        minLen(sections.summaryAndAdvice, 50)
+      // Check if we have the minimum required content
+      const hasMinimumContent = (
+        sections.yourDream && sections.yourDream.length > 20 &&
+        sections.introduction && sections.introduction.length > 30 &&
+        sections.overview && sections.overview.length > 30
       );
 
-      if (!complete) {
-        try {
-          console.log('⚠️ Analysis incomplete, attempting repair...');
-          const repairPrompt = `The following dream analysis has missing or thin sections. Repair it so ALL fields are present, non-empty, and grounded in the dream. Avoid generic language, avoid placeholders, avoid templates. Return ONLY valid JSON.\n\nDream: "${text.slice(0,2000)}"\n\nCurrent:\n${JSON.stringify({ sections, emotions: sectionEmotions, remedies }, null, 2)}`;
-          const repairResp = await axios.post(
-            baseUrl,
-            {
-              model,
-              messages: [
-                { role: 'user', content: repairPrompt }
-              ],
-              temperature: 0.7,
-              max_tokens: 1500
-            },
-            { 
-              timeout: Number(process.env.LM_STUDIO_TIMEOUT_MS || 15000),
-              validateStatus: (status) => status < 500
-            }
-          );
-          const rawRepair = repairResp?.data?.choices?.[0]?.message?.content?.trim() || '{}';
-          const repaired = JSON.parse(sanitizeJson(rawRepair));
-          const r = repaired.sections || {};
-          sections = {
-            yourDream: typeof r.yourDream === 'string' && r.yourDream.trim() ? r.yourDream : sections.yourDream,
-            introduction: typeof r.introduction === 'string' && r.introduction.trim() ? r.introduction : sections.introduction,
-            overview: typeof r.overview === 'string' && r.overview.trim() ? r.overview : sections.overview,
-            keySymbolsAndElements: normalizeSymbols(r.keySymbolsAndElements.length ? r.keySymbolsAndElements : sections.keySymbolsAndElements),
-            psychologicalInterpretation: typeof r.psychologicalInterpretation === 'string' && r.psychologicalInterpretation.trim() ? r.psychologicalInterpretation : sections.psychologicalInterpretation,
-            culturalContext: typeof r.culturalContext === 'string' ? r.culturalContext : sections.culturalContext,
-            connectionsToWakingLife: typeof r.connectionsToWakingLife === 'string' && r.connectionsToWakingLife.trim() ? r.connectionsToWakingLife : sections.connectionsToWakingLife,
-            summaryAndAdvice: typeof r.summaryAndAdvice === 'string' && r.summaryAndAdvice.trim() ? r.summaryAndAdvice : sections.summaryAndAdvice
-          };
-          sectionEmotions = repaired.emotions && typeof repaired.emotions === 'object' ? repaired.emotions : sectionEmotions;
-          remedies = Array.isArray(repaired.remedies) && repaired.remedies.length ? repaired.remedies.slice(0,6) : remedies;
-        } catch (_) {
-          // keep existing sections
-        }
+      if (!hasMinimumContent) {
+        console.log('⚠️ Analysis incomplete - using what we have');
+      } else {
+        console.log('✅ LM Studio analysis parsed successfully');
       }
       interpretationDetails = {
         yourDream: sections.yourDream,
@@ -388,6 +461,8 @@ Return ONLY the JSON, no other text:`;
         summaryAndInsights: sections.summaryAndAdvice
       };
       aiSummary = sections.overview || sections.introduction || sections.yourDream;
+      suggestions = remedies; // Use remedies as suggestions
+      console.log('✅ Remedies/Suggestions generated:', remedies?.length || 0, 'items');
       interpretationDetails = {
         yourDream: sections.yourDream,
         introduction: sections.introduction,
@@ -440,6 +515,7 @@ Return ONLY the JSON, no other text:`;
         summaryAndAdvice: interpretationDetails.summaryAndInsights || ''
       };
       aiSummary = sections.overview || sections.introduction || sections.yourDream;
+      suggestions = remedies; // Use remedies as suggestions in fallback too
       
       console.log('✅ Dynamic fallback analysis generated successfully');
       console.log('   Sections:', Object.keys(sections));

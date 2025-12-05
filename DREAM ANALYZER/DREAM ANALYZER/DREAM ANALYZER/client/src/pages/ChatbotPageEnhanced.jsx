@@ -566,12 +566,14 @@ const ChatbotPageEnhanced = () => {
                               const d = msg.analysis.interpretationDetails || {};
                               const Section = ({ title, children, icon = null, className = '' }) => (
                                 <div style={{ 
-                                  marginBottom: 16,
-                                  padding: '16px',
+                                  marginBottom: 20,
+                                  padding: '18px',
                                   backgroundColor: 'white',
                                   borderRadius: '10px',
                                   boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
                                   borderLeft: '4px solid #4f46e5',
+                                  wordWrap: 'break-word',
+                                  overflowWrap: 'break-word',
                                   ...(className === 'actionable' ? {
                                     backgroundColor: '#f0f9ff',
                                     borderLeftColor: '#0ea5e9'
@@ -580,7 +582,7 @@ const ChatbotPageEnhanced = () => {
                                   <div style={{ 
                                     display: 'flex', 
                                     alignItems: 'center',
-                                    marginBottom: '10px',
+                                    marginBottom: '12px',
                                     color: '#2d3748',
                                     fontWeight: 600,
                                     fontSize: '15px'
@@ -588,7 +590,14 @@ const ChatbotPageEnhanced = () => {
                                     {icon && <span style={{ marginRight: '8px' }}>{icon}</span>}
                                     {title}
                                   </div>
-                                  <div style={{ color: '#4a5568', fontSize: '14px', lineHeight: '1.7' }}>
+                                  <div style={{ 
+                                    color: '#4a5568', 
+                                    fontSize: '14px', 
+                                    lineHeight: '1.8',
+                                    wordWrap: 'break-word',
+                                    overflowWrap: 'break-word',
+                                    whiteSpace: 'pre-wrap'
+                                  }}>
                                     {children}
                                   </div>
                                 </div>
@@ -605,9 +614,13 @@ const ChatbotPageEnhanced = () => {
                                       </div>
                                     </Section>
                                     {/* 2. Introduction */}
-                                    <Section title="Introduction" icon="🔍"><SafeMarkdown>{s.introduction}</SafeMarkdown></Section>
+                                    {s.introduction && s.introduction.length > 20 && (
+                                      <Section title="Introduction" icon="🔍"><SafeMarkdown>{s.introduction}</SafeMarkdown></Section>
+                                    )}
                                     {/* 3. Overview */}
-                                    <Section title="Overview" icon="📜"><SafeMarkdown>{s.overview}</SafeMarkdown></Section>
+                                    {s.overview && s.overview.length > 20 && (
+                                      <Section title="Overview" icon="📜"><SafeMarkdown>{s.overview}</SafeMarkdown></Section>
+                                    )}
                                     {/* 4. Key Symbols & Elements */}
                                     {Array.isArray(s.keySymbolsAndElements) && s.keySymbolsAndElements.length > 0 && (
                                       <Section title="Key Symbols & Elements" icon="🔑">
@@ -622,17 +635,25 @@ const ChatbotPageEnhanced = () => {
                                       </Section>
                                     )}
                                     {/* 5. Psychological Interpretation */}
-                                    <Section title="Psychological Interpretation" icon="🧠"><SafeMarkdown>{s.psychologicalInterpretation}</SafeMarkdown></Section>
+                                    {s.psychologicalInterpretation && s.psychologicalInterpretation.length > 30 && (
+                                      <Section title="Psychological Interpretation" icon="🧠"><SafeMarkdown>{s.psychologicalInterpretation}</SafeMarkdown></Section>
+                                    )}
                                     {/* 6. Cultural Context */}
-                                    <Section title="Cultural Context" icon="🌍"><SafeMarkdown>{s.culturalContext}</SafeMarkdown></Section>
+                                    {s.culturalContext && s.culturalContext.length > 20 && (
+                                      <Section title="Cultural Context" icon="🌍"><SafeMarkdown>{s.culturalContext}</SafeMarkdown></Section>
+                                    )}
                                     {/* 7. Connections to Waking Life */}
-                                    <Section title="Connections to Waking Life" icon="🔗"><SafeMarkdown>{s.connectionsToWakingLife}</SafeMarkdown></Section>
+                                    {s.connectionsToWakingLife && s.connectionsToWakingLife.length > 20 && (
+                                      <Section title="Connections to Waking Life" icon="🔗"><SafeMarkdown>{s.connectionsToWakingLife}</SafeMarkdown></Section>
+                                    )}
                                     {/* 8. Summary & Advice */}
-                                    <Section title="Summary & Advice" icon="💡" className="summary">
-                                      <div style={{ backgroundColor: '#eff6ff', padding: '14px 16px', borderRadius: '8px', borderLeft: '3px solid #60a5fa' }}>
-                                        <SafeMarkdown>{s.summaryAndAdvice}</SafeMarkdown>
-                                      </div>
-                                    </Section>
+                                    {s.summaryAndAdvice && s.summaryAndAdvice.length > 20 && (
+                                      <Section title="Summary & Advice" icon="💡" className="summary">
+                                        <div style={{ backgroundColor: '#eff6ff', padding: '14px 16px', borderRadius: '8px', borderLeft: '3px solid #60a5fa', wordWrap: 'break-word', overflowWrap: 'break-word' }}>
+                                          <SafeMarkdown>{s.summaryAndAdvice}</SafeMarkdown>
+                                        </div>
+                                      </Section>
+                                    )}
                                     <div style={{ fontSize: '12px', color: '#9ca3af', textAlign: 'center', marginTop: '16px', paddingTop: '12px', borderTop: '1px solid #e5e7eb' }}>
                                       Dream analysis is for entertainment purposes only. Consider consulting a professional for serious concerns.
                                     </div>
@@ -693,10 +714,36 @@ const ChatbotPageEnhanced = () => {
                       })()}
                       
                       {(msg.analysis.remedies && msg.analysis.remedies.length > 0) || (msg.analysis.suggestions && msg.analysis.suggestions.length > 0) ? (
-                        <div className="detail-section">
-                          <strong>Suggestions:</strong>
-                          <ul className="suggestions-list">
-                            {(msg.analysis.remedies || msg.analysis.suggestions || []).map((sug, i) => (<li key={i}>{sug}</li>))}
+                        <div className="detail-section" style={{ 
+                          marginTop: '20px',
+                          padding: '18px',
+                          backgroundColor: '#f0fdf4',
+                          borderRadius: '10px',
+                          borderLeft: '4px solid #22c55e',
+                          wordWrap: 'break-word',
+                          overflowWrap: 'break-word'
+                        }}>
+                          <strong style={{ 
+                            display: 'block',
+                            marginBottom: '12px',
+                            color: '#2d3748',
+                            fontSize: '15px',
+                            fontWeight: 600
+                          }}>✨ Suggestions:</strong>
+                          <ul className="suggestions-list" style={{
+                            margin: 0,
+                            paddingLeft: '20px',
+                            color: '#4a5568',
+                            fontSize: '14px',
+                            lineHeight: '1.8'
+                          }}>
+                            {(msg.analysis.remedies || msg.analysis.suggestions || []).map((sug, i) => (
+                              <li key={i} style={{ 
+                                marginBottom: '8px',
+                                wordWrap: 'break-word',
+                                overflowWrap: 'break-word'
+                              }}>{sug}</li>
+                            ))}
                           </ul>
                         </div>
                       ) : null}

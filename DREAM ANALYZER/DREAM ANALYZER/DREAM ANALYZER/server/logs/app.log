@@ -8396,3 +8396,728 @@
 2025-12-02 16:34:06 [INFO] 🌐 Access at: http://localhost:5000
 2025-12-02 16:34:06 [INFO] ✅ MongoDB Connected Successfully (Local)
 2025-12-02 16:34:06 [INFO] ✅ Database initialized
+2025-12-03 19:30:56 [INFO] ✅ Loaded route: /api/auth
+2025-12-03 19:30:56 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-03 19:30:56 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-03 19:30:56 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-03 19:30:56 [INFO] ✅ Loaded route: /api/sd
+2025-12-03 19:30:56 [INFO] ✅ Loaded route: /api/community
+2025-12-03 19:30:56 [INFO] ✅ Loaded route: /api/feedback
+2025-12-03 19:30:56 [INFO] ✅ Loaded route: /api/analytics
+2025-12-03 19:30:56 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-03 19:30:56 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-03 19:30:56 [INFO] ✅ Loaded route: /api/activity
+2025-12-03 19:30:56 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-03 19:30:57 [INFO] ✅ Backend Running on localhost:5000
+2025-12-03 19:30:57 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-03 19:30:57 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-03 19:30:57 [INFO] ✅ Database initialized
+2025-12-03 19:40:23 [INFO] ✅ Loaded route: /api/auth
+2025-12-03 19:40:23 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-03 19:40:23 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-03 19:40:23 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-03 19:40:23 [INFO] ✅ Loaded route: /api/sd
+2025-12-03 19:40:23 [INFO] ✅ Loaded route: /api/community
+2025-12-03 19:40:23 [INFO] ✅ Loaded route: /api/feedback
+2025-12-03 19:40:23 [INFO] ✅ Loaded route: /api/analytics
+2025-12-03 19:40:23 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-03 19:40:23 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-03 19:40:23 [INFO] ✅ Loaded route: /api/activity
+2025-12-03 19:40:23 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-03 19:40:23 [INFO] ✅ Backend Running on localhost:5000
+2025-12-03 19:40:23 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-03 19:40:23 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-03 19:40:23 [INFO] ✅ Database initialized
+2025-12-03 19:42:43 [INFO] [Image Generation] Request received - Prompt: "a lion is hunting a human"
+2025-12-03 19:42:43 [ERROR] [Image Generation] Error generating image:
+2025-12-03 19:42:45 [INFO] [Image Generation] Request received - Prompt: "a lion is hunting a human"
+2025-12-03 19:42:45 [ERROR] [Image Generation] Error generating image:
+2025-12-03 19:42:49 [INFO] [Image Generation] Request received - Prompt: "a lion is hunting a human"
+2025-12-03 19:42:49 [ERROR] [Image Generation] Error generating image:
+2025-12-03 20:49:20 [INFO] ✅ Loaded route: /api/auth
+2025-12-03 20:49:21 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-03 20:49:21 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-03 20:49:28 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-03 20:49:29 [INFO] ✅ Loaded route: /api/sd
+2025-12-03 20:49:29 [INFO] ✅ Loaded route: /api/community
+2025-12-03 20:49:29 [INFO] ✅ Loaded route: /api/feedback
+2025-12-03 20:49:29 [INFO] ✅ Loaded route: /api/analytics
+2025-12-03 20:49:29 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-03 20:49:29 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-03 20:49:29 [INFO] ✅ Loaded route: /api/activity
+2025-12-03 20:49:29 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-03 20:49:33 [WARN] ⚠️  MongoDB Local connection failed: Server selection timed out after 10000 ms
+2025-12-03 20:49:33 [ERROR] ❌ All MongoDB connection attempts failed. Set MONGO_URI_ATLAS or ensure local MongoDB is running.
+2025-12-03 20:49:33 [ERROR] ❌ Database init failed: MongoDB connection failed
+2025-12-03 20:49:33 [INFO] ✅ Backend Running on localhost:5000
+2025-12-03 20:49:33 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-03 20:49:53 [INFO] ✅ Loaded route: /api/auth
+2025-12-03 20:49:53 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-03 20:49:53 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-03 20:49:54 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-03 20:49:54 [INFO] ✅ Loaded route: /api/sd
+2025-12-03 20:49:54 [INFO] ✅ Loaded route: /api/community
+2025-12-03 20:49:54 [INFO] ✅ Loaded route: /api/feedback
+2025-12-03 20:49:54 [INFO] ✅ Loaded route: /api/analytics
+2025-12-03 20:49:54 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-03 20:49:54 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-03 20:49:54 [INFO] ✅ Loaded route: /api/activity
+2025-12-03 20:49:54 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-03 20:49:54 [INFO] ✅ Backend Running on localhost:5000
+2025-12-03 20:49:54 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-03 20:49:54 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-03 20:49:54 [INFO] ✅ Database initialized
+2025-12-03 21:01:26 [INFO] ✅ Loaded route: /api/auth
+2025-12-03 21:01:26 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-03 21:01:26 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-03 21:01:27 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-03 21:01:27 [INFO] ✅ Loaded route: /api/sd
+2025-12-03 21:01:27 [INFO] ✅ Loaded route: /api/community
+2025-12-03 21:01:27 [INFO] ✅ Loaded route: /api/feedback
+2025-12-03 21:01:27 [INFO] ✅ Loaded route: /api/analytics
+2025-12-03 21:01:27 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-03 21:01:27 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-03 21:01:27 [INFO] ✅ Loaded route: /api/activity
+2025-12-03 21:01:27 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-03 21:01:27 [INFO] ✅ Backend Running on localhost:5000
+2025-12-03 21:01:27 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-03 21:01:27 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-03 21:01:27 [INFO] ✅ Database initialized
+2025-12-03 21:11:13 [INFO] ✅ Loaded route: /api/auth
+2025-12-03 21:11:14 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-03 21:11:14 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-03 21:11:14 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-03 21:11:14 [INFO] ✅ Loaded route: /api/sd
+2025-12-03 21:11:14 [INFO] ✅ Loaded route: /api/community
+2025-12-03 21:11:14 [INFO] ✅ Loaded route: /api/feedback
+2025-12-03 21:11:14 [INFO] ✅ Loaded route: /api/analytics
+2025-12-03 21:11:14 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-03 21:11:14 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-03 21:11:14 [INFO] ✅ Loaded route: /api/activity
+2025-12-03 21:11:14 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-03 21:11:14 [INFO] ✅ Backend Running on localhost:5000
+2025-12-03 21:11:14 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-03 21:11:14 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-03 21:11:14 [INFO] ✅ Database initialized
+2025-12-03 21:23:27 [INFO] ✅ Loaded route: /api/auth
+2025-12-03 21:23:27 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-03 21:23:27 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-03 21:23:28 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-03 21:23:28 [INFO] ✅ Loaded route: /api/sd
+2025-12-03 21:23:28 [INFO] ✅ Loaded route: /api/community
+2025-12-03 21:23:28 [INFO] ✅ Loaded route: /api/feedback
+2025-12-03 21:23:28 [INFO] ✅ Loaded route: /api/analytics
+2025-12-03 21:23:28 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-03 21:23:28 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-03 21:23:28 [INFO] ✅ Loaded route: /api/activity
+2025-12-03 21:23:28 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-03 21:23:28 [INFO] ✅ Backend Running on localhost:5000
+2025-12-03 21:23:28 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-03 21:23:28 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-03 21:23:28 [INFO] ✅ Database initialized
+2025-12-03 21:25:11 [INFO] ✅ Loaded route: /api/auth
+2025-12-03 21:25:11 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-03 21:25:11 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-03 21:25:11 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-03 21:25:11 [INFO] ✅ Loaded route: /api/sd
+2025-12-03 21:25:11 [INFO] ✅ Loaded route: /api/community
+2025-12-03 21:25:11 [INFO] ✅ Loaded route: /api/feedback
+2025-12-03 21:25:11 [INFO] ✅ Loaded route: /api/analytics
+2025-12-03 21:25:11 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-03 21:25:11 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-03 21:25:11 [INFO] ✅ Loaded route: /api/activity
+2025-12-03 21:25:11 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-03 21:25:11 [INFO] ✅ Backend Running on localhost:5000
+2025-12-03 21:25:11 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-03 21:25:12 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-03 21:25:12 [INFO] ✅ Database initialized
+2025-12-03 21:34:26 [INFO] ✅ Loaded route: /api/auth
+2025-12-03 21:34:26 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-03 21:34:26 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-03 21:34:26 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-03 21:34:26 [INFO] ✅ Loaded route: /api/sd
+2025-12-03 21:34:26 [INFO] ✅ Loaded route: /api/community
+2025-12-03 21:34:26 [INFO] ✅ Loaded route: /api/feedback
+2025-12-03 21:34:26 [INFO] ✅ Loaded route: /api/analytics
+2025-12-03 21:34:26 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-03 21:34:26 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-03 21:34:26 [INFO] ✅ Loaded route: /api/activity
+2025-12-03 21:34:26 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-03 21:34:26 [INFO] ✅ Backend Running on localhost:5000
+2025-12-03 21:34:26 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-03 21:34:26 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-03 21:34:26 [INFO] ✅ Database initialized
+2025-12-03 21:42:27 [INFO] ✅ Loaded route: /api/auth
+2025-12-03 21:42:27 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-03 21:42:27 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-03 21:42:27 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-03 21:42:27 [INFO] ✅ Loaded route: /api/sd
+2025-12-03 21:42:27 [INFO] ✅ Loaded route: /api/community
+2025-12-03 21:42:27 [INFO] ✅ Loaded route: /api/feedback
+2025-12-03 21:42:27 [INFO] ✅ Loaded route: /api/analytics
+2025-12-03 21:42:27 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-03 21:42:27 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-03 21:42:27 [INFO] ✅ Loaded route: /api/activity
+2025-12-03 21:42:27 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-03 21:42:27 [INFO] ✅ Backend Running on localhost:5000
+2025-12-03 21:42:27 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-03 21:42:27 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-03 21:42:27 [INFO] ✅ Database initialized
+2025-12-03 21:45:00 [INFO] ✅ Loaded route: /api/auth
+2025-12-03 21:45:00 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-03 21:45:00 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-03 21:45:00 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-03 21:45:00 [INFO] ✅ Loaded route: /api/sd
+2025-12-03 21:45:00 [INFO] ✅ Loaded route: /api/community
+2025-12-03 21:45:00 [INFO] ✅ Loaded route: /api/feedback
+2025-12-03 21:45:00 [INFO] ✅ Loaded route: /api/analytics
+2025-12-03 21:45:00 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-03 21:45:00 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-03 21:45:00 [INFO] ✅ Loaded route: /api/activity
+2025-12-03 21:45:00 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-03 21:45:00 [INFO] ✅ Backend Running on localhost:5000
+2025-12-03 21:45:00 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-03 21:45:01 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-03 21:45:01 [INFO] ✅ Database initialized
+2025-12-03 21:49:36 [INFO] ✅ Loaded route: /api/auth
+2025-12-03 21:49:36 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-03 21:49:36 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-03 21:49:36 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-03 21:49:36 [INFO] ✅ Loaded route: /api/sd
+2025-12-03 21:49:36 [INFO] ✅ Loaded route: /api/community
+2025-12-03 21:49:36 [INFO] ✅ Loaded route: /api/feedback
+2025-12-03 21:49:36 [INFO] ✅ Loaded route: /api/analytics
+2025-12-03 21:49:36 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-03 21:49:36 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-03 21:49:36 [INFO] ✅ Loaded route: /api/activity
+2025-12-03 21:49:36 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-03 21:49:36 [INFO] ✅ Backend Running on localhost:5000
+2025-12-03 21:49:36 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-03 21:49:36 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-03 21:49:36 [INFO] ✅ Database initialized
+2025-12-03 21:56:00 [INFO] ✅ Loaded route: /api/auth
+2025-12-03 21:56:00 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-03 21:56:00 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-03 21:56:01 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-03 21:56:01 [INFO] ✅ Loaded route: /api/sd
+2025-12-03 21:56:01 [INFO] ✅ Loaded route: /api/community
+2025-12-03 21:56:01 [INFO] ✅ Loaded route: /api/feedback
+2025-12-03 21:56:01 [INFO] ✅ Loaded route: /api/analytics
+2025-12-03 21:56:01 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-03 21:56:01 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-03 21:56:01 [INFO] ✅ Loaded route: /api/activity
+2025-12-03 21:56:01 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-03 21:56:01 [INFO] ✅ Backend Running on localhost:5000
+2025-12-03 21:56:01 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-03 21:56:01 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-03 21:56:01 [INFO] ✅ Database initialized
+2025-12-03 22:01:31 [INFO] ✅ Loaded route: /api/auth
+2025-12-03 22:01:31 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-03 22:01:31 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-03 22:01:32 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-03 22:01:32 [INFO] ✅ Loaded route: /api/sd
+2025-12-03 22:01:32 [INFO] ✅ Loaded route: /api/community
+2025-12-03 22:01:32 [INFO] ✅ Loaded route: /api/feedback
+2025-12-03 22:01:32 [INFO] ✅ Loaded route: /api/analytics
+2025-12-03 22:01:32 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-03 22:01:32 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-03 22:01:32 [INFO] ✅ Loaded route: /api/activity
+2025-12-03 22:01:32 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-03 22:01:32 [INFO] ✅ Backend Running on localhost:5000
+2025-12-03 22:01:32 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-03 22:01:32 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-03 22:01:32 [INFO] ✅ Database initialized
+2025-12-03 22:07:07 [INFO] ✅ Loaded route: /api/auth
+2025-12-03 22:07:07 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-03 22:07:07 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-03 22:07:07 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-03 22:07:07 [INFO] ✅ Loaded route: /api/sd
+2025-12-03 22:07:07 [INFO] ✅ Loaded route: /api/community
+2025-12-03 22:07:07 [INFO] ✅ Loaded route: /api/feedback
+2025-12-03 22:07:07 [INFO] ✅ Loaded route: /api/analytics
+2025-12-03 22:07:07 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-03 22:07:07 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-03 22:07:07 [INFO] ✅ Loaded route: /api/activity
+2025-12-03 22:07:07 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-03 22:07:07 [INFO] ✅ Backend Running on localhost:5000
+2025-12-03 22:07:07 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-03 22:07:07 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-03 22:07:07 [INFO] ✅ Database initialized
+2025-12-03 22:12:18 [INFO] ✅ Loaded route: /api/auth
+2025-12-03 22:12:18 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-03 22:12:18 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-03 22:12:19 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-03 22:12:19 [INFO] ✅ Loaded route: /api/sd
+2025-12-03 22:12:19 [INFO] ✅ Loaded route: /api/community
+2025-12-03 22:12:19 [INFO] ✅ Loaded route: /api/feedback
+2025-12-03 22:12:19 [INFO] ✅ Loaded route: /api/analytics
+2025-12-03 22:12:19 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-03 22:12:19 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-03 22:12:19 [INFO] ✅ Loaded route: /api/activity
+2025-12-03 22:12:19 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-03 22:12:19 [INFO] ✅ Backend Running on localhost:5000
+2025-12-03 22:12:19 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-03 22:12:19 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-03 22:12:19 [INFO] ✅ Database initialized
+2025-12-03 22:15:14 [INFO] [Image Generation] Request received - Prompt: "i was hiding in shadow of rock"
+2025-12-03 22:16:30 [INFO] [Image Generation] Image generated in 76600ms: /uploads/sd-generated/61ab9add-4100-4828-8835-3d67281054dc.png
+2025-12-03 22:22:46 [INFO] ✅ Loaded route: /api/auth
+2025-12-03 22:22:46 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-03 22:22:46 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-03 22:22:46 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-03 22:22:46 [INFO] ✅ Loaded route: /api/sd
+2025-12-03 22:22:46 [INFO] ✅ Loaded route: /api/community
+2025-12-03 22:22:46 [INFO] ✅ Loaded route: /api/feedback
+2025-12-03 22:22:46 [INFO] ✅ Loaded route: /api/analytics
+2025-12-03 22:22:46 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-03 22:22:46 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-03 22:22:46 [INFO] ✅ Loaded route: /api/activity
+2025-12-03 22:22:46 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-03 22:22:46 [INFO] ✅ Backend Running on localhost:5000
+2025-12-03 22:22:46 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-03 22:22:46 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-03 22:22:46 [INFO] ✅ Database initialized
+2025-12-03 22:28:13 [INFO] ✅ Loaded route: /api/auth
+2025-12-03 22:28:14 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-03 22:28:14 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-03 22:28:14 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-03 22:28:14 [INFO] ✅ Loaded route: /api/sd
+2025-12-03 22:28:14 [INFO] ✅ Loaded route: /api/community
+2025-12-03 22:28:14 [INFO] ✅ Loaded route: /api/feedback
+2025-12-03 22:28:14 [INFO] ✅ Loaded route: /api/analytics
+2025-12-03 22:28:14 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-03 22:28:14 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-03 22:28:14 [INFO] ✅ Loaded route: /api/activity
+2025-12-03 22:28:14 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-03 22:28:14 [INFO] ✅ Backend Running on localhost:5000
+2025-12-03 22:28:14 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-03 22:28:14 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-03 22:28:14 [INFO] ✅ Database initialized
+2025-12-03 22:31:32 [INFO] [Image Generation] Request received - Prompt: "i was fighting with alian"
+2025-12-03 22:32:43 [INFO] [Image Generation] Image generated in 70652ms: /uploads/sd-generated/2356c8fe-8803-42f7-acfe-eddd9b5434c0.png
+2025-12-03 22:39:01 [INFO] ✅ Loaded route: /api/auth
+2025-12-03 22:39:02 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-03 22:39:02 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-03 22:39:08 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-03 22:39:08 [INFO] ✅ Loaded route: /api/sd
+2025-12-03 22:39:08 [INFO] ✅ Loaded route: /api/community
+2025-12-03 22:39:08 [INFO] ✅ Loaded route: /api/feedback
+2025-12-03 22:39:08 [INFO] ✅ Loaded route: /api/analytics
+2025-12-03 22:39:08 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-03 22:39:08 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-03 22:39:08 [INFO] ✅ Loaded route: /api/activity
+2025-12-03 22:39:09 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-03 22:39:12 [WARN] ⚠️  MongoDB Local connection failed: Server selection timed out after 10000 ms
+2025-12-03 22:39:12 [ERROR] ❌ All MongoDB connection attempts failed. Set MONGO_URI_ATLAS or ensure local MongoDB is running.
+2025-12-03 22:39:12 [ERROR] ❌ Database init failed: MongoDB connection failed
+2025-12-03 22:39:12 [INFO] ✅ Backend Running on localhost:5000
+2025-12-03 22:39:12 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-03 22:39:22 [INFO] ✅ Loaded route: /api/auth
+2025-12-03 22:39:22 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-03 22:39:22 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-03 22:39:22 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-03 22:39:22 [INFO] ✅ Loaded route: /api/sd
+2025-12-03 22:39:22 [INFO] ✅ Loaded route: /api/community
+2025-12-03 22:39:22 [INFO] ✅ Loaded route: /api/feedback
+2025-12-03 22:39:22 [INFO] ✅ Loaded route: /api/analytics
+2025-12-03 22:39:22 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-03 22:39:22 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-03 22:39:22 [INFO] ✅ Loaded route: /api/activity
+2025-12-03 22:39:22 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-03 22:39:22 [INFO] ✅ Backend Running on localhost:5000
+2025-12-03 22:39:22 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-03 22:39:22 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-03 22:39:22 [INFO] ✅ Database initialized
+2025-12-03 22:44:38 [INFO] ✅ Loaded route: /api/auth
+2025-12-03 22:44:38 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-03 22:44:38 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-03 22:44:39 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-03 22:44:39 [INFO] ✅ Loaded route: /api/sd
+2025-12-03 22:44:39 [INFO] ✅ Loaded route: /api/community
+2025-12-03 22:44:39 [INFO] ✅ Loaded route: /api/feedback
+2025-12-03 22:44:39 [INFO] ✅ Loaded route: /api/analytics
+2025-12-03 22:44:39 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-03 22:44:39 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-03 22:44:39 [INFO] ✅ Loaded route: /api/activity
+2025-12-03 22:44:39 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-03 22:44:39 [INFO] ✅ Backend Running on localhost:5000
+2025-12-03 22:44:39 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-03 22:44:39 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-03 22:44:39 [INFO] ✅ Database initialized
+2025-12-03 22:50:55 [INFO] ✅ Loaded route: /api/auth
+2025-12-03 22:50:56 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-03 22:50:56 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-03 22:51:03 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-03 22:51:03 [INFO] ✅ Loaded route: /api/sd
+2025-12-03 22:51:03 [INFO] ✅ Loaded route: /api/community
+2025-12-03 22:51:03 [INFO] ✅ Loaded route: /api/feedback
+2025-12-03 22:51:03 [INFO] ✅ Loaded route: /api/analytics
+2025-12-03 22:51:03 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-03 22:51:03 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-03 22:51:03 [INFO] ✅ Loaded route: /api/activity
+2025-12-03 22:51:03 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-03 22:51:07 [WARN] ⚠️  MongoDB Local connection failed: Server selection timed out after 10000 ms
+2025-12-03 22:51:07 [ERROR] ❌ All MongoDB connection attempts failed. Set MONGO_URI_ATLAS or ensure local MongoDB is running.
+2025-12-03 22:51:07 [ERROR] ❌ Database init failed: MongoDB connection failed
+2025-12-03 22:51:07 [INFO] ✅ Backend Running on localhost:5000
+2025-12-03 22:51:07 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-03 22:51:18 [INFO] ✅ Loaded route: /api/auth
+2025-12-03 22:51:18 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-03 22:51:18 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-03 22:51:18 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-03 22:51:18 [INFO] ✅ Loaded route: /api/sd
+2025-12-03 22:51:18 [INFO] ✅ Loaded route: /api/community
+2025-12-03 22:51:18 [INFO] ✅ Loaded route: /api/feedback
+2025-12-03 22:51:18 [INFO] ✅ Loaded route: /api/analytics
+2025-12-03 22:51:18 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-03 22:51:18 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-03 22:51:18 [INFO] ✅ Loaded route: /api/activity
+2025-12-03 22:51:18 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-03 22:51:18 [INFO] ✅ Backend Running on localhost:5000
+2025-12-03 22:51:18 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-03 22:51:18 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-03 22:51:18 [INFO] ✅ Database initialized
+2025-12-03 22:55:51 [INFO] [Image Generation] Request received - Prompt: "i saw a beautifull god in my dream"
+2025-12-03 22:56:35 [INFO] [Image Generation] Image generated in 43928ms: /uploads/sd-generated/281f9972-db34-40af-b3a7-bdd67960f5e7.png
+2025-12-04 06:08:13 [INFO] ✅ Loaded route: /api/auth
+2025-12-04 06:08:13 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-04 06:08:13 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-04 06:08:14 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-04 06:08:14 [INFO] ✅ Loaded route: /api/sd
+2025-12-04 06:08:14 [INFO] ✅ Loaded route: /api/community
+2025-12-04 06:08:14 [INFO] ✅ Loaded route: /api/feedback
+2025-12-04 06:08:14 [INFO] ✅ Loaded route: /api/analytics
+2025-12-04 06:08:14 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-04 06:08:14 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-04 06:08:14 [INFO] ✅ Loaded route: /api/activity
+2025-12-04 06:08:14 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-04 06:08:15 [INFO] ✅ Backend Running on localhost:5000
+2025-12-04 06:08:15 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-04 06:08:15 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-04 06:08:15 [INFO] ✅ Database initialized
+2025-12-04 06:16:04 [INFO] ✅ Loaded route: /api/auth
+2025-12-04 06:16:05 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-04 06:16:05 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-04 06:16:05 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-04 06:16:05 [INFO] ✅ Loaded route: /api/sd
+2025-12-04 06:16:05 [INFO] ✅ Loaded route: /api/community
+2025-12-04 06:16:05 [INFO] ✅ Loaded route: /api/feedback
+2025-12-04 06:16:05 [INFO] ✅ Loaded route: /api/analytics
+2025-12-04 06:16:05 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-04 06:16:05 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-04 06:16:05 [INFO] ✅ Loaded route: /api/activity
+2025-12-04 06:16:05 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-04 06:16:06 [INFO] ✅ Backend Running on localhost:5000
+2025-12-04 06:16:06 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-04 06:16:06 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-04 06:16:06 [INFO] ✅ Database initialized
+2025-12-04 06:24:35 [INFO] ✅ Loaded route: /api/auth
+2025-12-04 06:24:36 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-04 06:24:36 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-04 06:24:44 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-04 06:24:45 [INFO] ✅ Loaded route: /api/sd
+2025-12-04 06:24:45 [INFO] ✅ Loaded route: /api/community
+2025-12-04 06:24:45 [INFO] ✅ Loaded route: /api/feedback
+2025-12-04 06:24:45 [INFO] ✅ Loaded route: /api/analytics
+2025-12-04 06:24:45 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-04 06:24:45 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-04 06:24:45 [INFO] ✅ Loaded route: /api/activity
+2025-12-04 06:24:45 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-04 06:24:49 [WARN] ⚠️  MongoDB Local connection failed: Server selection timed out after 10000 ms
+2025-12-04 06:24:49 [ERROR] ❌ All MongoDB connection attempts failed. Set MONGO_URI_ATLAS or ensure local MongoDB is running.
+2025-12-04 06:24:49 [ERROR] ❌ Database init failed: MongoDB connection failed
+2025-12-04 06:24:49 [INFO] ✅ Backend Running on localhost:5000
+2025-12-04 06:24:49 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-04 06:25:00 [INFO] ✅ Loaded route: /api/auth
+2025-12-04 06:25:00 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-04 06:25:00 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-04 06:25:00 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-04 06:25:00 [INFO] ✅ Loaded route: /api/sd
+2025-12-04 06:25:00 [INFO] ✅ Loaded route: /api/community
+2025-12-04 06:25:00 [INFO] ✅ Loaded route: /api/feedback
+2025-12-04 06:25:00 [INFO] ✅ Loaded route: /api/analytics
+2025-12-04 06:25:00 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-04 06:25:00 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-04 06:25:00 [INFO] ✅ Loaded route: /api/activity
+2025-12-04 06:25:00 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-04 06:25:00 [INFO] ✅ Backend Running on localhost:5000
+2025-12-04 06:25:00 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-04 06:25:00 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-04 06:25:00 [INFO] ✅ Database initialized
+2025-12-04 06:33:04 [INFO] ✅ Loaded route: /api/auth
+2025-12-04 06:33:04 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-04 06:33:04 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-04 06:33:04 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-04 06:33:04 [INFO] ✅ Loaded route: /api/sd
+2025-12-04 06:33:04 [INFO] ✅ Loaded route: /api/community
+2025-12-04 06:33:04 [INFO] ✅ Loaded route: /api/feedback
+2025-12-04 06:33:04 [INFO] ✅ Loaded route: /api/analytics
+2025-12-04 06:33:05 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-04 06:33:05 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-04 06:33:05 [INFO] ✅ Loaded route: /api/activity
+2025-12-04 06:33:05 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-04 06:33:05 [INFO] ✅ Backend Running on localhost:5000
+2025-12-04 06:33:05 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-04 06:33:05 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-04 06:33:05 [INFO] ✅ Database initialized
+2025-12-04 06:38:41 [INFO] ✅ Loaded route: /api/auth
+2025-12-04 06:38:42 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-04 06:38:42 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-04 06:38:46 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-04 06:38:46 [INFO] ✅ Loaded route: /api/sd
+2025-12-04 06:38:46 [INFO] ✅ Loaded route: /api/community
+2025-12-04 06:38:46 [INFO] ✅ Loaded route: /api/feedback
+2025-12-04 06:38:46 [INFO] ✅ Loaded route: /api/analytics
+2025-12-04 06:38:46 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-04 06:38:46 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-04 06:38:46 [INFO] ✅ Loaded route: /api/activity
+2025-12-04 06:38:46 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-04 06:38:48 [WARN] ⚠️  MongoDB Local connection failed: Server selection timed out after 10000 ms
+2025-12-04 06:38:48 [ERROR] ❌ All MongoDB connection attempts failed. Set MONGO_URI_ATLAS or ensure local MongoDB is running.
+2025-12-04 06:38:48 [ERROR] ❌ Database init failed: MongoDB connection failed
+2025-12-04 06:38:48 [INFO] ✅ Backend Running on localhost:5000
+2025-12-04 06:38:48 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-04 06:38:57 [INFO] ✅ Loaded route: /api/auth
+2025-12-04 06:38:57 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-04 06:38:58 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-04 06:38:58 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-04 06:38:58 [INFO] ✅ Loaded route: /api/sd
+2025-12-04 06:38:58 [INFO] ✅ Loaded route: /api/community
+2025-12-04 06:38:58 [INFO] ✅ Loaded route: /api/feedback
+2025-12-04 06:38:58 [INFO] ✅ Loaded route: /api/analytics
+2025-12-04 06:38:58 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-04 06:38:58 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-04 06:38:58 [INFO] ✅ Loaded route: /api/activity
+2025-12-04 06:38:58 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-04 06:38:58 [INFO] ✅ Backend Running on localhost:5000
+2025-12-04 06:38:58 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-04 06:38:58 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-04 06:38:58 [INFO] ✅ Database initialized
+2025-12-04 06:52:02 [INFO] ✅ Loaded route: /api/auth
+2025-12-04 06:52:03 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-04 06:52:03 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-04 06:52:09 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-04 06:52:09 [INFO] ✅ Loaded route: /api/sd
+2025-12-04 06:52:09 [INFO] ✅ Loaded route: /api/community
+2025-12-04 06:52:09 [INFO] ✅ Loaded route: /api/feedback
+2025-12-04 06:52:09 [INFO] ✅ Loaded route: /api/analytics
+2025-12-04 06:52:09 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-04 06:52:09 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-04 06:52:09 [INFO] ✅ Loaded route: /api/activity
+2025-12-04 06:52:09 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-04 06:52:12 [WARN] ⚠️  MongoDB Local connection failed: Server selection timed out after 10000 ms
+2025-12-04 06:52:12 [ERROR] ❌ All MongoDB connection attempts failed. Set MONGO_URI_ATLAS or ensure local MongoDB is running.
+2025-12-04 06:52:12 [ERROR] ❌ Database init failed: MongoDB connection failed
+2025-12-04 06:52:12 [INFO] ✅ Backend Running on localhost:5000
+2025-12-04 06:52:12 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-04 06:52:21 [INFO] ✅ Loaded route: /api/auth
+2025-12-04 06:52:21 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-04 06:52:21 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-04 06:52:21 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-04 06:52:21 [INFO] ✅ Loaded route: /api/sd
+2025-12-04 06:52:21 [INFO] ✅ Loaded route: /api/community
+2025-12-04 06:52:21 [INFO] ✅ Loaded route: /api/feedback
+2025-12-04 06:52:21 [INFO] ✅ Loaded route: /api/analytics
+2025-12-04 06:52:21 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-04 06:52:21 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-04 06:52:21 [INFO] ✅ Loaded route: /api/activity
+2025-12-04 06:52:21 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-04 06:52:21 [INFO] ✅ Backend Running on localhost:5000
+2025-12-04 06:52:21 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-04 06:52:21 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-04 06:52:21 [INFO] ✅ Database initialized
+2025-12-04 07:01:58 [INFO] [Image Generation] Request received - Prompt: "i was eaten by my pet dog"
+2025-12-04 07:02:51 [INFO] [Image Generation] Image generated in 53705ms: /uploads/sd-generated/19dc09cf-bcfc-448a-bc2a-fbd7c83de504.png
+2025-12-04 07:06:47 [INFO] ✅ Loaded route: /api/auth
+2025-12-04 07:06:47 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-04 07:06:47 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-04 07:06:48 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-04 07:06:48 [INFO] ✅ Loaded route: /api/sd
+2025-12-04 07:06:48 [INFO] ✅ Loaded route: /api/community
+2025-12-04 07:06:48 [INFO] ✅ Loaded route: /api/feedback
+2025-12-04 07:06:48 [INFO] ✅ Loaded route: /api/analytics
+2025-12-04 07:06:48 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-04 07:06:48 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-04 07:06:48 [INFO] ✅ Loaded route: /api/activity
+2025-12-04 07:06:48 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-04 07:06:48 [INFO] ✅ Backend Running on localhost:5000
+2025-12-04 07:06:48 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-04 07:06:48 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-04 07:06:48 [INFO] ✅ Database initialized
+2025-12-04 07:09:19 [INFO] [Image Generation] Request received - Prompt: "i was eating whole forest in my dream"
+2025-12-04 07:10:02 [INFO] [Image Generation] Image generated in 43435ms: /uploads/sd-generated/0d9d5885-448f-465a-bbf5-2a195dbabb05.png
+2025-12-04 07:12:51 [INFO] ✅ Loaded route: /api/auth
+2025-12-04 07:12:51 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-04 07:12:51 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-04 07:12:51 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-04 07:12:51 [INFO] ✅ Loaded route: /api/sd
+2025-12-04 07:12:51 [INFO] ✅ Loaded route: /api/community
+2025-12-04 07:12:51 [INFO] ✅ Loaded route: /api/feedback
+2025-12-04 07:12:51 [INFO] ✅ Loaded route: /api/analytics
+2025-12-04 07:12:51 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-04 07:12:51 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-04 07:12:51 [INFO] ✅ Loaded route: /api/activity
+2025-12-04 07:12:51 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-04 07:12:51 [INFO] ✅ Backend Running on localhost:5000
+2025-12-04 07:12:51 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-04 07:12:51 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-04 07:12:51 [INFO] ✅ Database initialized
+2025-12-04 07:14:20 [INFO] [Image Generation] Request received - Prompt: "i was eaten by fox in my dream"
+2025-12-04 07:14:31 [INFO] [Image Generation] Image generated in 11178ms: /uploads/sd-generated/cac27213-b710-4737-b3a3-09f98d557ef0.png
+2025-12-04 08:29:05 [INFO] ✅ Loaded route: /api/auth
+2025-12-04 08:29:07 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-04 08:29:07 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-04 08:29:16 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-04 08:29:17 [INFO] ✅ Loaded route: /api/sd
+2025-12-04 08:29:17 [INFO] ✅ Loaded route: /api/community
+2025-12-04 08:29:17 [INFO] ✅ Loaded route: /api/feedback
+2025-12-04 08:29:17 [INFO] ✅ Loaded route: /api/analytics
+2025-12-04 08:29:17 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-04 08:29:17 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-04 08:29:17 [INFO] ✅ Loaded route: /api/activity
+2025-12-04 08:29:17 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-04 08:29:21 [WARN] ⚠️  MongoDB Local connection failed: Server selection timed out after 10000 ms
+2025-12-04 08:29:21 [ERROR] ❌ All MongoDB connection attempts failed. Set MONGO_URI_ATLAS or ensure local MongoDB is running.
+2025-12-04 08:29:21 [ERROR] ❌ Database init failed: MongoDB connection failed
+2025-12-04 08:29:21 [INFO] ✅ Backend Running on localhost:5000
+2025-12-04 08:29:21 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-04 08:29:41 [INFO] ✅ Loaded route: /api/auth
+2025-12-04 08:29:41 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-04 08:29:41 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-04 08:29:42 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-04 08:29:42 [INFO] ✅ Loaded route: /api/sd
+2025-12-04 08:29:42 [INFO] ✅ Loaded route: /api/community
+2025-12-04 08:29:42 [INFO] ✅ Loaded route: /api/feedback
+2025-12-04 08:29:42 [INFO] ✅ Loaded route: /api/analytics
+2025-12-04 08:29:42 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-04 08:29:42 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-04 08:29:42 [INFO] ✅ Loaded route: /api/activity
+2025-12-04 08:29:42 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-04 08:29:42 [INFO] ✅ Backend Running on localhost:5000
+2025-12-04 08:29:42 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-04 08:29:42 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-04 08:29:42 [INFO] ✅ Database initialized
+2025-12-04 09:25:03 [INFO] ✅ Loaded route: /api/auth
+2025-12-04 09:25:03 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-04 09:25:03 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-04 09:25:04 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-04 09:25:04 [INFO] ✅ Loaded route: /api/sd
+2025-12-04 09:25:04 [INFO] ✅ Loaded route: /api/community
+2025-12-04 09:25:04 [INFO] ✅ Loaded route: /api/feedback
+2025-12-04 09:25:04 [INFO] ✅ Loaded route: /api/analytics
+2025-12-04 09:25:04 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-04 09:25:04 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-04 09:25:04 [INFO] ✅ Loaded route: /api/activity
+2025-12-04 09:25:04 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-04 09:25:04 [INFO] ✅ Backend Running on localhost:5000
+2025-12-04 09:25:04 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-04 09:25:04 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-04 09:25:04 [INFO] ✅ Database initialized
+2025-12-04 09:27:22 [INFO] [Image Generation] Request received - Prompt: "i was moving to america in my dream"
+2025-12-04 09:27:39 [INFO] [Image Generation] Image generated in 16264ms: /uploads/sd-generated/2509e3b3-5fe0-4fd4-b62d-a07e47369f30.png
+2025-12-04 09:39:50 [INFO] [Image Generation] Request received - Prompt: "i was happily dancing with my friends in a flower garden"
+2025-12-04 09:39:59 [INFO] [Image Generation] Image generated in 9035ms: /uploads/sd-generated/76ee5a41-39d6-4668-8f49-351ad4f11574.png
+2025-12-04 09:59:30 [INFO] ✅ Loaded route: /api/auth
+2025-12-04 09:59:32 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-04 09:59:32 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-04 09:59:40 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-04 09:59:40 [INFO] ✅ Loaded route: /api/sd
+2025-12-04 09:59:40 [INFO] ✅ Loaded route: /api/community
+2025-12-04 09:59:40 [INFO] ✅ Loaded route: /api/feedback
+2025-12-04 09:59:40 [INFO] ✅ Loaded route: /api/analytics
+2025-12-04 09:59:40 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-04 09:59:40 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-04 09:59:40 [INFO] ✅ Loaded route: /api/activity
+2025-12-04 09:59:40 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-04 09:59:44 [WARN] ⚠️  MongoDB Local connection failed: Server selection timed out after 10000 ms
+2025-12-04 09:59:44 [ERROR] ❌ All MongoDB connection attempts failed. Set MONGO_URI_ATLAS or ensure local MongoDB is running.
+2025-12-04 09:59:44 [ERROR] ❌ Database init failed: MongoDB connection failed
+2025-12-04 09:59:45 [INFO] ✅ Backend Running on localhost:5000
+2025-12-04 09:59:45 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-04 10:00:29 [INFO] ✅ Loaded route: /api/auth
+2025-12-04 10:00:29 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-04 10:00:29 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-04 10:00:30 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-04 10:00:30 [INFO] ✅ Loaded route: /api/sd
+2025-12-04 10:00:30 [INFO] ✅ Loaded route: /api/community
+2025-12-04 10:00:30 [INFO] ✅ Loaded route: /api/feedback
+2025-12-04 10:00:30 [INFO] ✅ Loaded route: /api/analytics
+2025-12-04 10:00:30 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-04 10:00:30 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-04 10:00:30 [INFO] ✅ Loaded route: /api/activity
+2025-12-04 10:00:30 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-04 10:00:30 [INFO] ✅ Backend Running on localhost:5000
+2025-12-04 10:00:30 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-04 10:00:30 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-04 10:00:30 [INFO] ✅ Database initialized
+2025-12-04 10:06:38 [INFO] [Image Generation] Request received - Prompt: "i was chased by tiger"
+2025-12-04 10:07:30 [INFO] [Image Generation] Image generated in 51160ms: /uploads/sd-generated/c9f31c6b-37cd-471f-9354-57ed0ad6ad1f.png
+2025-12-04 13:34:43 [INFO] ✅ Loaded route: /api/auth
+2025-12-04 13:34:44 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-04 13:34:44 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-04 13:34:52 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-04 13:34:53 [INFO] ✅ Loaded route: /api/sd
+2025-12-04 13:34:53 [INFO] ✅ Loaded route: /api/community
+2025-12-04 13:34:53 [INFO] ✅ Loaded route: /api/feedback
+2025-12-04 13:34:53 [INFO] ✅ Loaded route: /api/analytics
+2025-12-04 13:34:53 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-04 13:34:53 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-04 13:34:53 [INFO] ✅ Loaded route: /api/activity
+2025-12-04 13:34:53 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-04 13:34:56 [WARN] ⚠️  MongoDB Local connection failed: Server selection timed out after 10000 ms
+2025-12-04 13:34:56 [ERROR] ❌ All MongoDB connection attempts failed. Set MONGO_URI_ATLAS or ensure local MongoDB is running.
+2025-12-04 13:34:56 [ERROR] ❌ Database init failed: MongoDB connection failed
+2025-12-04 13:34:56 [INFO] ✅ Backend Running on localhost:5000
+2025-12-04 13:34:56 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-04 13:35:07 [INFO] ✅ Loaded route: /api/auth
+2025-12-04 13:35:07 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-04 13:35:07 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-04 13:35:07 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-04 13:35:07 [INFO] ✅ Loaded route: /api/sd
+2025-12-04 13:35:07 [INFO] ✅ Loaded route: /api/community
+2025-12-04 13:35:07 [INFO] ✅ Loaded route: /api/feedback
+2025-12-04 13:35:07 [INFO] ✅ Loaded route: /api/analytics
+2025-12-04 13:35:07 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-04 13:35:07 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-04 13:35:07 [INFO] ✅ Loaded route: /api/activity
+2025-12-04 13:35:07 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-04 13:35:07 [INFO] ✅ Backend Running on localhost:5000
+2025-12-04 13:35:07 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-04 13:35:08 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-04 13:35:08 [INFO] ✅ Database initialized
+2025-12-04 13:40:38 [INFO] ✅ Loaded route: /api/auth
+2025-12-04 13:40:38 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-04 13:40:38 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-04 13:40:38 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-04 13:40:38 [INFO] ✅ Loaded route: /api/sd
+2025-12-04 13:40:38 [INFO] ✅ Loaded route: /api/community
+2025-12-04 13:40:38 [INFO] ✅ Loaded route: /api/feedback
+2025-12-04 13:40:38 [INFO] ✅ Loaded route: /api/analytics
+2025-12-04 13:40:38 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-04 13:40:38 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-04 13:40:38 [INFO] ✅ Loaded route: /api/activity
+2025-12-04 13:40:38 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-04 13:40:39 [INFO] ✅ Backend Running on localhost:5000
+2025-12-04 13:40:39 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-04 13:40:39 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-04 13:40:39 [INFO] ✅ Database initialized
+2025-12-04 13:53:13 [INFO] [Image Generation] Request received - Prompt: "i was dancing in rain"
+2025-12-04 13:54:31 [INFO] [Image Generation] Image generated in 78347ms: /uploads/sd-generated/10a6b1c2-9948-4898-859e-daa468edafb3.png
+2025-12-04 20:18:37 [INFO] ✅ Loaded route: /api/auth
+2025-12-04 20:18:37 [WARN] ⚠️  Route not found: /api/dreams (./routes/dreams.js)
+2025-12-04 20:18:37 [INFO] ✅ Loaded route: /api/chatbot
+2025-12-04 20:18:37 [INFO] ✅ Loaded route: /api/dream-diary
+2025-12-04 20:18:37 [INFO] ✅ Loaded route: /api/sd
+2025-12-04 20:18:37 [INFO] ✅ Loaded route: /api/community
+2025-12-04 20:18:38 [INFO] ✅ Loaded route: /api/feedback
+2025-12-04 20:18:38 [INFO] ✅ Loaded route: /api/analytics
+2025-12-04 20:18:38 [INFO] ✅ Loaded route: /api/dream-diary/lifestyle
+2025-12-04 20:18:38 [INFO] ✅ Loaded route: /api/recent-activity
+2025-12-04 20:18:38 [INFO] ✅ Loaded route: /api/activity
+2025-12-04 20:18:38 [INFO] ✅ Loaded route: /api/generate-image
+2025-12-04 20:18:38 [INFO] ✅ Backend Running on localhost:5000
+2025-12-04 20:18:38 [INFO] 🌐 Access at: http://localhost:5000
+2025-12-04 20:18:38 [INFO] ✅ MongoDB Connected Successfully (Local)
+2025-12-04 20:18:38 [INFO] ✅ Database initialized
+2025-12-04 20:21:32 [INFO] [Image Generation] Request received - Prompt: "my brother gifted me a laptop"
+2025-12-04 20:23:01 [INFO] [Image Generation] Image generated in 88842ms: /uploads/sd-generated/f935f426-8a9e-4394-ba08-fcbfefa17eb5.png
