@@ -40,7 +40,7 @@ export const SocketProvider = ({ children }) => {
     console.log('🔌 Initializing socket connection...');
     
     try {
-      const socket = io(process.env.REACT_APP_SOCKET_URL || process.env.REACT_APP_SERVER_URL || 'http://localhost:5000', {
+      const socket = io(process.env.REACT_APP_SOCKET_URL || process.env.REACT_APP_API_URL || 'http://localhost:5000', {
         auth: { token: localStorage.getItem('token') },
         transports: ['websocket'],
         upgrade: true,
