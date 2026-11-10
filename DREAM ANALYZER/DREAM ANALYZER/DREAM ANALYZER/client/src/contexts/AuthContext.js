@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 import toast from 'react-hot-toast';
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 
 // Create context with a default empty object to avoid null issues
 // Export the context itself as default
