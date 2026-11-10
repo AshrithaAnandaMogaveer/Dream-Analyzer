@@ -27,6 +27,7 @@ app.use(compression());
 const allowedOrigins = [
   process.env.CLIENT_URL,
   'https://dream-analyzer-client.vercel.app',
+  'https://dream-analyzer-client-pdosyj7jbc-neura-craft1.vercel.app',
   'http://localhost:3000',
   'http://127.0.0.1:3000',
   'http://localhost:3001',
