@@ -1,180 +1,170 @@
+
 const axios = require('axios');
 
-// LM Studio Configuration - ONLY LOCAL LLM
-const LM_STUDIO_URL = process.env.LM_STUDIO_URL || 'http://127.0.0.1:1234/v1/chat/completions';
-const LM_STUDIO_MODEL = process.env.LM_STUDIO_MODEL || 'local-model';
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
 
-console.log('🔧 LM Studio Configuration:');
-console.log('   URL:', LM_STUDIO_URL);
-console.log('   Model:', LM_STUDIO_MODEL);
-
-// Analyze dream with LM Studio ONLY
 async function analyzeDreamWithAI(content, mood, intensity, userContext = {}) {
-  console.log('🔵 analyzeDreamWithAI called - Using LM Studio ONLY');
-  console.log('� Drieam text length:', content.length);
-  
-  // Input validation
-  if (!content || typeof content !== 'string' || content.trim().length === 0) {
+  if (!content || typeof content !== 'string' || !content.trim()) {
     throw new Error('Dream content is required');
   }
 
-  try {
-    const systemPrompt = `You are a professional dream interpreter and behavioral psychologist. Analyze dreams with expertise in Jungian and Freudian analysis, cross-cultural symbolism, and modern cognitive psychology.
+  if (!GEMINI_API_KEY) {
+    throw new Error('GEMINI_API_KEY is missing from environment variables');
+  }
 
-Respond with a valid JSON object containing these exact fields:
+  const systemPrompt = `
+You are an expert dream interpretation assistant.
+Analyze dreams using modern psychology, Jungian and Freudian
+perspectives, cultural symbolism, and emotional context.
+
+Be thoughtful, detailed, supportive, and avoid presenting
+interpretations as certain predictions or medical diagnoses.
+
+Return ONLY valid JSON with these exact fields:
 {
-  "introduction": "A warm, engaging 2-3 sentence introduction",
-  "overview": "A concise 2-3 sentence summary of main themes",
-  "keySymbols": [{"symbol": "Symbol name", "meaning": "Detailed explanation"}, {"symbol": "Symbol 2", "meaning": "Explanation 2"}],
-  "psychological": "2-3 paragraphs of psychological analysis",
-  "cultural": "1-2 paragraphs on cultural/mythological significance",
-  "connections": "1-2 paragraphs connecting dream to waking life",
-  "summary": "Concise summary with 2-3 practical suggestions"
+  "introduction": "2-3 sentence introduction",
+  "overview": "Summary of the dream",
+  "keySymbols": [
+    {"symbol": "Symbol name", "meaning": "Detailed meaning"}
+  ],
+  "psychological": "Detailed psychological interpretation",
+  "cultural": "Cultural and symbolic interpretation",
+  "connections": "Connections to waking life",
+  "summary": "Summary and practical suggestions"
 }
+`;
 
-Return ONLY valid JSON, no markdown.`;
+  const userPrompt = `
+Analyze this dream:
 
-    const userPrompt = `Analyze this dream:
+Dream: ${content}
 
-"${content}"
+User context:
+Mood: ${mood || 'Neutral'}
+Intensity: ${intensity || 5}/10
+Age: ${userContext.age || 'Not specified'}
+Gender: ${userContext.gender || 'Not specified'}
+Occupation: ${userContext.fieldOfWork || 'Not specified'}
 
-Context:
-- Mood: ${mood || 'Neutral'} (${intensity || 5}/10)
-- Age: ${userContext.age || 'Not specified'}
-- Gender: ${userContext.gender || 'Not specified'}
-- Occupation: ${userContext.fieldOfWork || 'Not specified'}
+Provide a personalized analysis based on the supplied information.
+`;
 
-Provide comprehensive analysis in JSON format.`;
+  try {
+    console.log('Calling Gemini API for dream analysis...');
 
-    console.log('� Sendting request to LM Studio...');
-    const startTime = Date.now();
-
-    // Call LM Studio directly with axios
-    const response = await axios.post(LM_STUDIO_URL, {
-      model: LM_STUDIO_MODEL,
-      messages: [
-        { role: 'system', content: systemPrompt },
-        { role: 'user', content: userPrompt }
-      ],
-      temperature: 0.7,
-      max_tokens: 2500,
-      stream: false
-    }, {
-      timeout: 60000, // 60 second timeout
-      headers: {
-        'Content-Type': 'application/json'
+    const response = await axios.post(
+      `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`,
+      {
+        systemInstruction: {
+          parts: [{ text: systemPrompt }]
+        },
+        contents: [
+          {
+            role: 'user',
+            parts: [{ text: userPrompt }]
+          }
+        ],
+        generationConfig: {
+          temperature: 0.7,
+          maxOutputTokens: 3000,
+          responseMimeType: 'application/json'
+        }
+      },
+      {
+        params: { key: GEMINI_API_KEY },
+        timeout: 60000,
+        headers: { 'Content-Type': 'application/json' }
       }
-    });
+    );
 
-    const duration = Date.now() - startTime;
-    console.log(`✅ LM Studio response received in ${duration}ms`);
+    const aiResponse =
+      response.data?.candidates?.[0]?.content?.parts
+        ?.map(part => part.text || '')
+        .join('') || '';
 
-    // Extract response content
-    const aiResponse = response.data?.choices?.[0]?.message?.content || '{}';
-    console.log('📥 Response length:', aiResponse.length);
-    console.log('📥 First 200 chars:', aiResponse.substring(0, 200));
-
-    // Parse JSON response
-    let analysis;
-    try {
-      // Remove markdown code blocks if present
-      let cleanContent = aiResponse.trim();
-      if (cleanContent.startsWith('```json')) {
-        cleanContent = cleanContent.replace(/```json\n?/g, '').replace(/```\n?$/g, '');
-      } else if (cleanContent.startsWith('```')) {
-        cleanContent = cleanContent.replace(/```\n?/g, '');
-      }
-      
-      analysis = JSON.parse(cleanContent);
-      console.log('✅ Successfully parsed JSON response');
-      console.log('📊 Response keys:', Object.keys(analysis));
-      
-    } catch (parseError) {
-      console.error('❌ Failed to parse JSON:', parseError.message);
-      console.error('Raw response:', aiResponse.substring(0, 500));
-      throw new Error('Failed to parse LM Studio response as JSON');
+    if (!aiResponse) {
+      throw new Error('Gemini returned an empty response');
     }
 
-    // Validate required fields
-    const requiredFields = ['introduction', 'overview', 'keySymbols', 'psychological', 'cultural', 'connections', 'summary'];
+    const analysis = JSON.parse(aiResponse);
+
+    const requiredFields = [
+      'introduction',
+      'overview',
+      'keySymbols',
+      'psychological',
+      'cultural',
+      'connections',
+      'summary'
+    ];
+
     for (const field of requiredFields) {
-      if (!analysis[field]) {
-        console.warn(`⚠️ Missing required field: ${field}`);
+      if (analysis[field] === undefined || analysis[field] === null) {
+        throw new Error(`Gemini response is missing field: ${field}`);
       }
     }
-    
-    // Ensure keySymbols is an array
+
     if (!Array.isArray(analysis.keySymbols)) {
-      console.warn('⚠️ keySymbols is not an array, converting to array');
       analysis.keySymbols = [];
     }
 
-    // Map to expected format
-    const keySymbols = analysis.keySymbols || [];
-    
+    const keySymbols = analysis.keySymbols;
+
     const result = {
-      interpretation: analysis.overview || analysis.introduction || 'Dream analysis completed',
+      interpretation: analysis.overview || analysis.introduction,
       suggestions: [
-        'Keep a dream journal to track patterns',
-        'Reflect on how this dream relates to your current life',
-        'Consider discussing this dream with someone you trust',
-        'Explore the cultural significance of key symbols',
-        'Note connections between your dream and recent experiences'
+        'Maintain a dream journal to identify recurring themes.',
+        'Reflect on emotions connected to your dream.',
+        'Consider how recent experiences may relate to the dream.',
+        'Explore the meaning of important dream symbols.'
       ],
-      emotionalInsights: analysis.psychological || '',
-      mentalState: analysis.overview || '',
-      culturalContext: analysis.cultural || '',
-      connectionsToWakingLife: analysis.connections || '',
+      emotionalInsights: analysis.psychological,
+      mentalState: analysis.overview,
+      culturalContext: analysis.cultural,
+      connectionsToWakingLife: analysis.connections,
       symbolism: keySymbols,
-      patterns: ['Pattern analysis'],
+      patterns: keySymbols.map(item => item.symbol).filter(Boolean),
       confidence: 85,
       detailedAnalysis: {
-        introduction: analysis.introduction || '',
-        overview: analysis.overview || '',
+        introduction: analysis.introduction,
+        overview: analysis.overview,
         keySymbolsAndElements: keySymbols,
-        psychologicalInterpretation: analysis.psychological || '',
-        culturalContext: analysis.cultural || '',
-        connectionsToWakingLife: analysis.connections || '',
-        summaryAndInsights: analysis.summary || '',
+        psychologicalInterpretation: analysis.psychological,
+        culturalContext: analysis.cultural,
+        connectionsToWakingLife: analysis.connections,
+        summaryAndInsights: analysis.summary,
         raw: JSON.stringify(analysis, null, 2)
       }
     };
 
-    console.log('✅ Analysis formatted successfully');
+    console.log('Gemini dream analysis completed successfully.');
     return result;
 
   } catch (error) {
-    console.error('❌ LM Studio Error:', error.message);
-    
-    if (error.code === 'ECONNREFUSED') {
-      console.error('❌ Cannot connect to LM Studio. Make sure:');
-      console.error('   1. LM Studio is running');
-      console.error('   2. A model is loaded');
-      console.error('   3. Server is started on port 1234');
-      throw new Error('LM Studio is not running or not accessible at ' + LM_STUDIO_URL);
-    }
-    
-    if (error.code === 'ETIMEDOUT' || error.code === 'ECONNABORTED') {
-      console.error('❌ LM Studio request timed out');
-      throw new Error('LM Studio request timed out - model may be too slow or not responding');
-    }
-    
-    throw error;
+    console.error(
+      'Gemini API error:',
+      error.response?.data || error.message
+    );
+
+    throw new Error(
+      error.response?.data?.error?.message ||
+      error.message ||
+      'Dream analysis failed'
+    );
   }
 }
 
-// Generate dream image (stub - returns fallback)
+// Existing image-generation placeholder.
+// Image generation needs a separate hosted image API integration.
 async function generateDreamImage(prompt) {
-  console.log('🎨 Image generation requested:', prompt);
-  return '/fallback.svg';
+  throw new Error('Image generation API is not configured yet');
 }
 
-// Extract mood levels (stub)
 async function extractMoodLevelsFromText(text) {
   return { happiness: 5, stress: 5 };
 }
 
-// Interpret dream text (stub)
 async function interpretDreamText(text) {
   return 'Dream interpretation';
 }
