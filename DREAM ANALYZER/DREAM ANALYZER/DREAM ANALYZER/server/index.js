@@ -26,6 +26,7 @@ app.use(compression());
 // Allow multiple dev origins (CRA may run on 3000 or 3001). Respect CLIENT_URL if set.
 const allowedOrigins = [
   process.env.CLIENT_URL,
+  'https://dream-analyzer-client.vercel.app',
   'http://localhost:3000',
   'http://127.0.0.1:3000',
   'http://localhost:3001',
