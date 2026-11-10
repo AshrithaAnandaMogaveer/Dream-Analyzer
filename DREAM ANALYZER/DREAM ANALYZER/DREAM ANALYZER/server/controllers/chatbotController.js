@@ -2,7 +2,11 @@ const DreamAnalysis = require('../models/DreamAnalysis');
 const ImageCache = require('../models/ImageCache');
 const crypto = require('crypto');
 const axios = require('axios');
-const { extractMoodLevelsFromText, generateDreamImage } = require('../services/aiService');
+const {
+  extractMoodLevelsFromText,
+  generateDreamImage,
+  analyzeDreamWithAI
+} = require('../services/aiService');
 const { logActivity } = require('../controllers/recentActivityController');
 
 // Keyword extraction with emotional context
